@@ -27,11 +27,11 @@ public class GRADSDriver {
 		}
 
 		//watch for input from the user and respond 
-		for (;;)
-		{
-			
-		}
-		
+//		for (;;)
+//		{
+//			
+//		}
+//		
 
 	}
 
