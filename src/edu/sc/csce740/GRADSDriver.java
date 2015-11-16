@@ -17,8 +17,8 @@ public class GRADSDriver {
 		try
 		{
 		//Have the grads system load the uses, records and courses 
-		grads.loadUsers("C:/Users/Hero/workspace/GRADS/bin/edu/sc/csce740/GRADS_Materials/data/users.txt");
-		grads.loadCourses("C:/Users/Hero/workspace/GRADS/bin/edu/sc/csce740/GRADS_Materials/data/courses.txt");
+		grads.loadUsers("C:/Users/New Hotness/git/GRADS/src/edu/sc/csce740/GRADS_Materials/data/users.txt");
+		grads.loadCourses("C:/Users/New Hotness/git/GRADS/src/edu/sc/csce740/GRADS_Materials/data/courses.txt");
 		//grads.loadRecords("C:/Users/Hero/workspace/GRADS/bin/edu/sc/csce740/GRADS_Materials/data/students.txt");
 		}
 		catch (Exception e)
