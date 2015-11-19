@@ -1,7 +1,10 @@
 package edu.sc.csce740;
 
+<<<<<<< HEAD
 import java.util.List;
 
+=======
+>>>>>>> branch 'master' of https://github.com/evan-robbins/GRADS.git
 public class StudentRecord {
 	
 	//Class Variables
