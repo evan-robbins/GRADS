@@ -1,8 +1,6 @@
 package edu.sc.csce740;
 
 public class StudentRecord {
-
-	//Andrew Poop2
 	
 	//Class Variables
 	private Student student;

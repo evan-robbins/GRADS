@@ -2,42 +2,43 @@ package edu.sc.csce740;
 
 public class Courses {
 
-	private String name;
-	private String id;
-	private String numCredits;
+	//Class Variables
+	private Course course;
+	private Term term;
+	private String grade;
 	
-	public Courses(){
-		name = "";
-		id = "";
-		numCredits = "";
+	//General Constructor
+	public Courses(Course course, Term term, String grade) {
+		super();
+		this.course = course;
+		this.term = term;
+		this.grade = grade;
+	}
+
+	//Getters and Setters
+	public Course getCourse() {
+		return course;
+	}
+	public void setCourse(Course course) {
+		this.course = course;
+	}
+	public Term getTerm() {
+		return term;
+	}
+	public void setTerm(Term term) {
+		this.term = term;
+	}
+	public String getGrade() {
+		return grade;
+	}
+	public void setGrade(String grade) {
+		this.grade = grade;
 	}
 	
-	public String getName() {
-		return name;
+	//General ToString Method
+	@Override
+	public String toString() {
+		return "Courses [course=" + course + ", term=" + term + ", grade=" + grade + "]";
 	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public String getNumCredits() {
-		return numCredits;
-	}
-
-	public void setNumCredits(String numCredits) {
-		this.numCredits = numCredits;
-	}
-	
-	public String toString()
-	{
-		return "Courses [name=" + name + "" + ", id=" + id + ", numCredits=" + numCredits +"]";
-	}
+		
 }
