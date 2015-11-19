@@ -1,44 +1,60 @@
 package edu.sc.csce740;
 
-public class StudentRecord {
+import java.util.List;
 
-	//Andrew Poop2
+public class StudentRecord {
 	
 	//Class Variables
 	private Student student;
-	
-	private String department;
+	private String department; //all upper case and no spaces with under scores
+	private Term termBegan;
 	
 	private Degree degreeSought;
 	private Degree certificateSought;
-	private Degree previousDegrees;
+	private List<Degree> previousDegrees;
 	
-	private Term termBegan;
-	private Term graduation;
-	private Term term;
 	
-	private Professor advisors;
-	private Professor committee;
+	private List<Professor> advisors;
+	private List<Professor> committee;
 	
-	private CourseSR coursesTaken;
-	private Milestone milestonesSet;
+	private List<CourseTaken> coursesTaken;
 	
-	private String notes;
+	private List<Milestone> milestonesSet;
+	
+	private List<String> notes;
+	
+	public StudentRecord()
+	{
+//		this.student =  new Student();
+//		this.department = "COMPUTER_SCIENCE";
+//		this.termBegan = new Term();
+//		
+//		this.degreeSought = new Degree();
+//		this.certificateSought =  new Degree();
+//		this.previousDegrees.add( new Degree());
+//
+//		this.advisors.add(new Professor());
+//		this.committee.add(new Professor());
+//		this.coursesTaken.add(new CourseTaken());
+//		this.milestonesSet.add(new Milestone());
+//		this.notes.add("defaultNote");
+		
+		
+	}
 	
 	public StudentRecord(Student student, String department,
 			Degree degreeSought, Degree certificateSought,
-			Degree previousDegrees, Term termBegan, Term graduation, Term term,
-			Professor advisors, Professor committee, CourseSR coursesTaken,
-			Milestone milestonesSet, String notes) {
+			List<Degree> previousDegrees, Term termBegan, Term graduation, Term term,
+			List<Professor> advisors, List<Professor> committee, List<CourseTaken> coursesTaken,
+			List<Milestone> milestonesSet, List<String> notes) {
 		super();
 		this.student = student;
 		this.department = department;
+		
 		this.degreeSought = degreeSought;
 		this.certificateSought = certificateSought;
 		this.previousDegrees = previousDegrees;
-		this.termBegan = termBegan;
-		this.graduation = graduation;
-		this.term = term;
+
 		this.advisors = advisors;
 		this.committee = committee;
 		this.coursesTaken = coursesTaken;
@@ -79,11 +95,11 @@ public class StudentRecord {
 		this.certificateSought = certificateSought;
 	}
 
-	public Degree getPreviousDegrees() {
+	public List<Degree> getPreviousDegrees() {
 		return previousDegrees;
 	}
 
-	public void setPreviousDegrees(Degree previousDegrees) {
+	public void setPreviousDegrees(List<Degree> previousDegrees) {
 		this.previousDegrees = previousDegrees;
 	}
 
@@ -95,71 +111,54 @@ public class StudentRecord {
 		this.termBegan = termBegan;
 	}
 
-	public Term getGraduation() {
-		return graduation;
-	}
 
-	public void setGraduation(Term graduation) {
-		this.graduation = graduation;
-	}
-
-	public Term getTerm() {
-		return term;
-	}
-
-	public void setTerm(Term term) {
-		this.term = term;
-	}
-
-	public Professor getAdvisors() {
+	public List<Professor> getAdvisors() {
 		return advisors;
 	}
 
-	public void setAdvisors(Professor advisors) {
+	public void setAdvisors(List<Professor> advisors) {
 		this.advisors = advisors;
 	}
 
-	public Professor getCommittee() {
+	public List<Professor> getCommittee() {
 		return committee;
 	}
 
-	public void setCommittee(Professor committee) {
+	public void setCommittee(List<Professor> committee) {
 		this.committee = committee;
 	}
 
-	public CourseSR getCoursesTaken() {
+	public List<CourseTaken> getCoursesTaken() {
 		return coursesTaken;
 	}
 
-	public void setCoursesTaken(CourseSR coursesTaken) {
+	public void setCoursesTaken(List<CourseTaken> coursesTaken) {
 		this.coursesTaken = coursesTaken;
 	}
 
-	public Milestone getMilestonesSet() {
+	public List<Milestone> getMilestonesSet() {
 		return milestonesSet;
 	}
 
-	public void setMilestonesSet(Milestone milestonesSet) {
+	public void setMilestonesSet(List<Milestone> milestonesSet) {
 		this.milestonesSet = milestonesSet;
 	}
 
-	public String getNotes() {
+	public List<String> getNotes() {
 		return notes;
 	}
 
-	public void setNotes(String notes) {
+	public void setNotes(List<String> notes) {
 		this.notes = notes;
 	}
-
-	//General ToString Method
+	
 	@Override
 	public String toString() {
 		return "StudentRecord [student=" + student + ", department="
 				+ department + ", degreeSought=" + degreeSought
 				+ ", certificateSought=" + certificateSought
 				+ ", previousDegrees=" + previousDegrees + ", termBegan="
-				+ termBegan + ", graduation=" + graduation + ", term=" + term
-				+ ", advisors=" + advisors + ", committee=" + committee
+				+ termBegan +", advisors=" + advisors + ", committee=" + committee
 				+ ", coursesTaken=" + coursesTaken + ", milestonesSet="
 				+ milestonesSet + ", notes=" + notes + "]";
 	}

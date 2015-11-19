@@ -15,6 +15,12 @@ public class Student {
 		this.lastName = lastName;
 	}
 	
+	public Student() {
+		this.id = "defaultId";
+		this.firstName = "defaultFirstName";
+		this.lastName = "defaultLastName";
+	}
+
 	//Getters and Setters
 	public String getId() {
 		return id;

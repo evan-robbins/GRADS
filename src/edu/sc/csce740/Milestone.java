@@ -13,6 +13,12 @@ public class Milestone {
 		this.term = term;
 	}
 	
+	public Milestone() 
+	{
+		this.milestone = "defaultMilestone";
+		this.term = new Term();
+	}
+
 	//Getters and Setters
 	public String getMilestone() {
 		return milestone;

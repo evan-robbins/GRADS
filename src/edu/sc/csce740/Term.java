@@ -1,5 +1,7 @@
 package edu.sc.csce740;
 
+
+
 public class Term {
 
 	//Class Variables
@@ -13,6 +15,11 @@ public class Term {
 		this.year = year;
 	}
 	
+	public Term() {
+		this.semester = "FALL";
+		this.year = 2000;
+	}
+
 	//Getters and Setters
 	public String getSemester() {
 		return semester;

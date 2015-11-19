@@ -7,12 +7,17 @@ public class Degree {
 	private Term graduation;
 	
 	//General Constructor
-	public Degree(String name, Term graduation) {
-		super();
+	public Degree(String name, Term graduation) 
+	{
 		this.name = name;
 		this.graduation = graduation;
 	}
 	
+	public Degree() {
+		this.name = "defaulDegreeName";
+		this.graduation = new Term();
+	}
+
 	//Getters and Setters
 	public String getName() {
 		return name;

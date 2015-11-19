@@ -5,7 +5,7 @@ import java.util.List;
 public class Details {
 	
 	private double gpa;
-	private List<Courses> courses;
+	private List<Course> courses;
 	private List<Milestone> milestones;
 	//private List<Note>	notes;
 	

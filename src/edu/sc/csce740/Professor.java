@@ -15,6 +15,12 @@ public class Professor {
 		this.lastName = lastName;
 	}
 	
+	public Professor() {
+		this.department = "COMPUTER_SCIENCE";
+		this.firstName = "defaultFirstName";
+		this.lastName = "defaultLastName";
+	}
+
 	//Getters and Setters
 	public String getDepartment() {
 		return department;

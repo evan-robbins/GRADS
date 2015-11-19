@@ -1,12 +1,12 @@
 package edu.sc.csce740;
 
-public class Courses {
+public class Course {
 
 	private String name;
 	private String id;
 	private String numCredits;
 	
-	public Courses(){
+	public Course(){
 		name = "";
 		id = "";
 		numCredits = "";

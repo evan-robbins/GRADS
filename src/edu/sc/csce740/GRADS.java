@@ -10,7 +10,7 @@ import com.google.gson.reflect.TypeToken;
 public class GRADS implements GRADSIntf 
 {
 	private List<User> users;
-	private List<Courses> courses;
+	private List<Course> courses;
 	private List<StudentRecord> records;
 	
 	@Override
@@ -29,7 +29,7 @@ public class GRADS implements GRADSIntf
 		Gson gson = new Gson();
 		BufferedReader br = new BufferedReader(new FileReader (coursesFile));
 		
-		this.courses = gson.fromJson(br, new TypeToken <List<Courses>>(){}.getType());
+		this.courses = gson.fromJson(br, new TypeToken <List<Course>>(){}.getType());
 		System.out.println(this.courses);
 	}
 
@@ -41,7 +41,6 @@ public class GRADS implements GRADSIntf
 		
 		this.courses = gson.fromJson(br, new TypeToken <List<StudentRecord>>(){}.getType());
 		System.out.println(this.records);
-		
 	}
 
 	@Override
