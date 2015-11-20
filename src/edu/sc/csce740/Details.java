@@ -6,7 +6,7 @@ public class Details {
 	
 	//Class Variables
 	private double gpa;
-	private List<Course> courses;
+	private List<Course> course;
 	private List<Milestone> milestones;
 	private List<String> notes;
 	
@@ -14,7 +14,7 @@ public class Details {
 	public Details(double gpa, List<Courses> courses, List<Milestone> milestones, List<String> notes) {
 		super();
 		this.gpa = gpa;
-		this.courses = courses;
+		this.course = course;
 		this.milestones = milestones;
 		this.notes = notes;
 	}
@@ -28,12 +28,12 @@ public class Details {
 		this.gpa = gpa;
 	}
 
-	public List<Courses> getCourses() {
-		return courses;
+	public List<Course> getCourse() {
+		return course;
 	}
 
-	public void setCourses(List<Courses> courses) {
-		this.courses = courses;
+	public void setCourses(List<Course> course) {
+		this.course = course;
 	}
 
 	public List<Milestone> getMilestones() {
@@ -55,7 +55,7 @@ public class Details {
 	//General ToString Method
 	@Override
 	public String toString() {
-		return "Details [gpa=" + gpa + ", courses=" + courses + ", milestones=" + milestones + ", notes=" + notes + "]";
+		return "Details [gpa=" + gpa + ", course=" + course + ", milestones=" + milestones + ", notes=" + notes + "]";
 	}
 	
 	

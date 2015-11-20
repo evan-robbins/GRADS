@@ -15,6 +15,7 @@
       "graduation": {
         "semester": "SPRING",
         "year": 2018
+		}
       },
     "previousDegrees": [
        {
@@ -22,6 +23,7 @@
         "graduation": {
           "semester": "SPRING",
           "year": 2008
+          }
        }
     ],
     "advisors": [
@@ -184,6 +186,7 @@
           "semester": "FALL",
           "year": 2014
         }
+	  }
     ],
     "notes": [
       "Great student. A++ Would recommend.",

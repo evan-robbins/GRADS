@@ -1,10 +1,8 @@
 package edu.sc.csce740;
 
-<<<<<<< HEAD
 import java.util.List;
 
-=======
->>>>>>> branch 'master' of https://github.com/evan-robbins/GRADS.git
+
 public class StudentRecord {
 	
 	//Class Variables
@@ -50,7 +48,7 @@ public class StudentRecord {
 			List<Degree> previousDegrees, Term termBegan, Term graduation, Term term,
 			List<Professor> advisors, List<Professor> committee, List<CourseTaken> coursesTaken,
 			List<Milestone> milestonesSet, List<String> notes) {
-		super();
+		
 		this.student = student;
 		this.department = department;
 		
