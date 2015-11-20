@@ -11,7 +11,7 @@ public class Details {
 	private List<String> notes;
 	
 	//General Constructor
-	public Details(double gpa, List<Courses> courses, List<Milestone> milestones, List<String> notes) {
+	public Details(double gpa, List<Course> courses, List<Milestone> milestones, List<String> notes) {
 		super();
 		this.gpa = gpa;
 		this.courses = courses;
@@ -28,11 +28,11 @@ public class Details {
 		this.gpa = gpa;
 	}
 
-	public List<Courses> getCourses() {
+	public List<Course> getCourses() {
 		return courses;
 	}
 
-	public void setCourses(List<Courses> courses) {
+	public void setCourses(List<Course> courses) {
 		this.courses = courses;
 	}
 

@@ -1,10 +1,7 @@
 package edu.sc.csce740;
 
-<<<<<<< HEAD
 import java.util.List;
 
-=======
->>>>>>> branch 'master' of https://github.com/evan-robbins/GRADS.git
 public class StudentRecord {
 	
 	//Class Variables
@@ -28,19 +25,7 @@ public class StudentRecord {
 	
 	public StudentRecord()
 	{
-//		this.student =  new Student();
-//		this.department = "COMPUTER_SCIENCE";
-//		this.termBegan = new Term();
-//		
-//		this.degreeSought = new Degree();
-//		this.certificateSought =  new Degree();
-//		this.previousDegrees.add( new Degree());
-//
-//		this.advisors.add(new Professor());
-//		this.committee.add(new Professor());
-//		this.coursesTaken.add(new CourseTaken());
-//		this.milestonesSet.add(new Milestone());
-//		this.notes.add("defaultNote");
+
 		
 		
 	}

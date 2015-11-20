@@ -39,7 +39,7 @@ public class GRADS implements GRADSIntf
 		Gson gson = new Gson();
 		BufferedReader br = new BufferedReader(new FileReader (recordsFile));
 		
-		this.courses = gson.fromJson(br, new TypeToken <List<StudentRecord>>(){}.getType());
+		this.records = gson.fromJson(br, new TypeToken <List<StudentRecord>>(){}.getType());
 		System.out.println(this.records);
 	}
 
