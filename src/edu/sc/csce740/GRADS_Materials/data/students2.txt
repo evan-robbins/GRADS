@@ -14,15 +14,23 @@
       "name": "PHD",
       "graduation": {
         "semester": "SPRING",
-        "year": 2018  }
-         },
+        "year": 2018
+      },
+     "certificateSought": [
+       {
+        "name": "BS",
+        "graduation": {
+          "semester": "SPRING",
+          "year": 2008
+       }
+    ],
     "previousDegrees": [
        {
         "name": "BS",
         "graduation": {
           "semester": "SPRING",
-          "year": 2008  } 
-       },
+          "year": 2008
+       }
     ],
     "advisors": [
       {
@@ -184,7 +192,6 @@
           "semester": "FALL",
           "year": 2014
         }
-        },
     ],
     "notes": [
       "Great student. A++ Would recommend.",
@@ -209,25 +216,5 @@
       "note2",
       "note3"
     ]
-  },
-  
-  {
-    "student": {
-      "id": "rbob",
-      "firstName": "Robert",
-      "lastName": "Bob"
-    },
-    "department": "MATHEMATICS",
-    "termBegan": {
-      "semester": "FALL",
-      "year": 2013
-    },
-    "degreeSought": {
-      "name": "PHD",
-      "graduation": {
-        "semester": "SPRING",
-        "year": 2018  }
-         }
-   
-  },
+  }
 ]

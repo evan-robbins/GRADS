@@ -25,9 +25,24 @@ public class StudentRecord {
 	
 	public StudentRecord()
 	{
+//		Degree tempDegree = new Degree();
+//		Professor prof = new Professor();
+//		CourseTaken courseTaken = new CourseTaken();
+//		Milestone milestone = new Milestone();
+//		
+//		this.student =  new Student();
+//		this.department = "COMPUTER_SCIENCE";
+//		this.termBegan = new Term();
+//		
+//		this.degreeSought = new Degree();
+//		this.certificateSought =  new Degree();
+//		this.previousDegrees.add( tempDegree);
 
-		
-		
+//		this.advisors.add(prof);
+//		this.committee.add(prof);
+//		this.coursesTaken.add(courseTaken);
+//		this.milestonesSet.add(milestone);
+//		this.notes.add("defaultNote");
 	}
 	
 	public StudentRecord(Student student, String department,
@@ -139,8 +154,10 @@ public class StudentRecord {
 	public void setNotes(List<String> notes) {
 		this.notes = notes;
 	}
+	public void addNote(String note) {
+		this.notes.add(note);
+	}
 	
-	@Override
 	public String toString() {
 		return "StudentRecord [student=" + student + ", department="
 				+ department + ", degreeSought=" + degreeSought
