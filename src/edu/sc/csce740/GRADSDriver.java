@@ -14,6 +14,7 @@ public class GRADSDriver {
 		System.out.println("Welcome to GRADS");
 		GRADS grads = new GRADS();
 		
+		//LOADING DATABASES
 		try
 		{
 		//Have the grads system load the uses, records and courses 
@@ -31,13 +32,51 @@ public class GRADSDriver {
 			System.err.println("Caught IOEception: " + e.getMessage());
 		}
 
-		//watch for input from the user and respond 
-//		for (;;)
-//		{
-//			
-//		}
+		
+		//TESTING SETUSER FUNCTION
+		try
+		{
+		grads.setUser("mhunt");
+		}
+		catch (Exception e)
+		{
+			System.err.println("Caught IOEception: " + e.getMessage());
+		}
 
-
+		//TESTING CLEARSESSION FUNCTION
+		try
+		{
+		//System.out.println(grads.getactiveUser_().toString());
+		//grads.clearSession();
+		//System.out.println(grads.getactiveUser_().toString());
+		}
+		catch (Exception e)
+		{
+			System.err.println("Caught IOEception: " + e.getMessage());
+		}
+		
+		//TESTING GETTRANSCRIPT FUNCTION
+		try
+		{
+		//StudentRecord test = grads.getTranscript("mhunt");
+		//System.out.println(test.toString());
+		}
+		catch (Exception e)
+		{
+			System.err.println("Caught IOEception: " + e.getMessage());
+		}
+		
+		//TESTING GENERATEPROGRESSSUMMARY FUNCTION
+		try
+		{
+		ProgressSummary test = grads.generateProgressSummary("mhunt");
+		System.out.println(test.toString());
+		}
+		catch (Exception e)
+		{
+			System.err.println("Caught IOEception: " + e.getMessage());
+		}
+		
 	}
 
 }

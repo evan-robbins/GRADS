@@ -14,6 +14,10 @@ public class ProgressSummary {
 	private List<Professor> committee;
 	private List<RequirementCheckResults> requirementCheckResults;
 	
+	public ProgressSummary(){
+		
+	}
+	
 	//General Constructor
 	public ProgressSummary(Student student, String department, Term termBegan, Degree degreeSought,
 			Degree certificateSought, List<Professor> advisors, List<Professor> committee,
@@ -78,6 +82,7 @@ public class ProgressSummary {
 	public void setRequirementCheckResults(List<RequirementCheckResults> requirementCheckResults) {
 		this.requirementCheckResults = requirementCheckResults;
 	}
+	
 
 	//General ToString Method
 	@Override

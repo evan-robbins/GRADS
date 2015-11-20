@@ -26,21 +26,21 @@ public class StudentRecord {
 	
 	public StudentRecord()
 	{
-//		this.student =  new Student();
-//		this.department = "COMPUTER_SCIENCE";
-//		this.termBegan = new Term();
-//		
-//		this.degreeSought = new Degree();
-//		this.certificateSought =  new Degree();
-//		this.previousDegrees.add( new Degree());
-//
-//		this.advisors.add(new Professor());
-//		this.committee.add(new Professor());
-//		this.coursesTaken.add(new CourseTaken());
-//		this.milestonesSet.add(new Milestone());
-//		this.notes.add("defaultNote");
+		/*
+		this.student =  new Student();
+		this.department = "COMPUTER_SCIENCE";
+		this.termBegan = new Term();
 		
-		
+		this.degreeSought = new Degree();
+		this.certificateSought = new Degree();
+		this.previousDegrees.add(new Degree());
+
+		this.advisors.add(new Professor());
+		this.committee.add(new Professor());
+		this.coursesTaken.add(new CourseTaken());
+		this.milestonesSet.add(new Milestone());
+		this.notes.add("defaultNote");
+		*/
 	}
 	
 	public StudentRecord(Student student, String department,
