@@ -153,6 +153,13 @@ public class StudentRecord {
 		this.notes = notes;
 	}
 	
+
+	public void addNote(String note) {
+		this.notes.add(note);
+	}
+	
+	
+	
 	@Override
 	public String toString() {
 		return "StudentRecord [student=" + student + ", department="

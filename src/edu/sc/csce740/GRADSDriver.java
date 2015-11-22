@@ -21,6 +21,57 @@ public class GRADSDriver {
 		grads.loadUsers("C:/Users/New Hotness/git/GRADS/src/edu/sc/csce740/GRADS_Materials/data/users.txt");
 		grads.loadCourses("C:/Users/New Hotness/git/GRADS/src/edu/sc/csce740/GRADS_Materials/data/courses.txt");
 		grads.loadRecords("C:/Users/New Hotness/git/GRADS/src/edu/sc/csce740/GRADS_Materials/data/students.txt");
+		
+		grads.setUser("mhunt");
+		//grads.setUser("mmatthews");
+		
+		//GET STUDENT IDS FUNCTION TEST
+		//System.out.println(grads.getStudentIDs());
+		
+		//ADD NOTE FUNCTION TEST
+		//grads.addNote("mhunt", "shouldnt see in records class", false); //should work
+		grads.addNote("mhunt", "peep gonna fail again", true); // should work  
+		
+		//grads.addNote("rbob", "gonna fail", false); // should fail - not csce  
+		//grads.addNote("adfa", "gonna fail", false); // should fail - no student record  
+		
+		//grads.setUser("mhunt");
+		//grads.addNote("mhunt", "notes are gay", false); //should fail, not gpc
+		
+		//UPDATE TRANSCRIPT FUNCTION TEST
+		//grads.setUser("mhunt");
+		//StudentRecord temp = grads.getRecords().get(0);
+		//temp.getDegreeSought().setName("UGH SCREW THIS");
+		//grads.updateTranscript("mhunt", temp, false); //should work
+		
+		//temp.getStudent().setId("pika");
+		//grads.updateTranscript("mhunt", temp, false); //shouldnlt work
+		
+		//temp.getStudent().setFirstName("pikachu!");
+		//grads.updateTranscript("mhunt", temp, true); //should work
+		
+		//temp.getStudent().setFirstName("pikachu!");
+		//grads.updateTranscript("mhunt", temp, true); //should work
+		
+		//grads.setUser("mmatthews");
+		//temp.getStudent().setFirstName("Michelle");
+		//grads.updateTranscript("mhunt", temp, true); //should work
+		
+		
+		
+		//CLEAR SESSION FUNCTION TEST
+		//System.out.println(grads.getactiveUser_().toString());
+		//grads.clearSession();
+		//System.out.println(grads.getactiveUser_().toString());
+		
+		//GET TRANSCRIPT FUNCTION TEST
+		StudentRecord test = grads.getTranscript("mhunt");
+		System.out.println(test.toString());
+		
+		//GENERATE PROGRESS SUMMARY FUNCTION TEST
+		//ProgressSummary test = grads.generateProgressSummary("mhunt");
+		//System.out.println(test.toString());
+		
 			
 		//grads.loadUsers("C:/Users//Documents/Csce740/GRADS_Materials/GRADS_Materials/data/users.txt");
 		//grads.loadCourses("C:/Users/Hero/Documents/Csce740/GRADS_Materials/GRADS_Materials/data/courses.txt");	
@@ -31,52 +82,7 @@ public class GRADSDriver {
 		{
 			System.err.println("Caught IOEception: " + e.getMessage());
 		}
-
-		
-		//TESTING SETUSER FUNCTION
-		try
-		{
-		grads.setUser("mhunt");
-		}
-		catch (Exception e)
-		{
-			System.err.println("Caught IOEception: " + e.getMessage());
-		}
-
-		//TESTING CLEARSESSION FUNCTION
-		try
-		{
-		//System.out.println(grads.getactiveUser_().toString());
-		//grads.clearSession();
-		//System.out.println(grads.getactiveUser_().toString());
-		}
-		catch (Exception e)
-		{
-			System.err.println("Caught IOEception: " + e.getMessage());
-		}
-		
-		//TESTING GETTRANSCRIPT FUNCTION
-		try
-		{
-		//StudentRecord test = grads.getTranscript("mhunt");
-		//System.out.println(test.toString());
-		}
-		catch (Exception e)
-		{
-			System.err.println("Caught IOEception: " + e.getMessage());
-		}
-		
-		//TESTING GENERATEPROGRESSSUMMARY FUNCTION
-		try
-		{
-		ProgressSummary test = grads.generateProgressSummary("mhunt");
-		System.out.println(test.toString());
-		}
-		catch (Exception e)
-		{
-			System.err.println("Caught IOEception: " + e.getMessage());
-		}
-		
+			
 	}
 
 }

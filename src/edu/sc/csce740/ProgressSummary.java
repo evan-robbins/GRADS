@@ -82,6 +82,29 @@ public class ProgressSummary {
 	public void setRequirementCheckResults(List<RequirementCheckResults> requirementCheckResults) {
 		this.requirementCheckResults = requirementCheckResults;
 	}
+	public void setRequirementCheckResults(StudentRecord activeStud){
+		
+		if(activeStud.getDegreeSought().getName().equals("PHD")){
+			System.out.println(activeStud.getStudent().getId() + " is a PHD student!");
+			PHD activeDeg = new PHD();
+			activeDeg.create_PHD(activeStud);
+			this.requirementCheckResults = activeDeg.getpHD();
+		}
+		if(activeStud.getDegreeSought().getName().equals("MSCSE")){
+			System.out.println(activeStud.getStudent().getId() + " is a MSCSE student!");
+		}
+		if(activeStud.getDegreeSought().getName().equals("MECSE")){
+			System.out.println(activeStud.getStudent().getId() + " is a MECSE student!");
+		}
+		if(activeStud.getDegreeSought().getName().equals("MSE")){
+			System.out.println(activeStud.getStudent().getId() + " is a MSE student!");
+		}
+		if(activeStud.getDegreeSought().getName().equals("CGSIAS")){
+			System.out.println(activeStud.getStudent().getId() + " is a CGSIAS student!");
+		}
+		
+		
+	}
 	
 
 	//General ToString Method

@@ -5,35 +5,35 @@ import java.util.List;
 public class Details {
 	
 	//Class Variables
-	private double gpa;
-	private List<Course> course;
+	private String gpa;
+	private List<CourseTaken> courseTaken;
 	private List<Milestone> milestones;
 	private List<String> notes;
 	
 	//General Constructor
-	public Details(double gpa, List<Courses> courses, List<Milestone> milestones, List<String> notes) {
+	public Details(String gpa, List<CourseTaken> courseTaken, List<Milestone> milestones, List<String> notes) {
 		super();
 		this.gpa = gpa;
-		this.course = course;
+		this.courseTaken = courseTaken;
 		this.milestones = milestones;
 		this.notes = notes;
 	}
 
 	//Getters and Setters
-	public double getGpa() {
+	public String getGpa() {
 		return gpa;
 	}
 
-	public void setGpa(double gpa) {
+	public void setGpa(String gpa) {
 		this.gpa = gpa;
 	}
 
-	public List<Course> getCourse() {
-		return course;
+	public List<CourseTaken> getCourseTaken() {
+		return courseTaken;
 	}
 
-	public void setCourses(List<Course> course) {
-		this.course = course;
+	public void setCourseTaken(List<CourseTaken> CourseTaken) {
+		this.courseTaken = CourseTaken;
 	}
 
 	public List<Milestone> getMilestones() {
@@ -55,7 +55,7 @@ public class Details {
 	//General ToString Method
 	@Override
 	public String toString() {
-		return "Details [gpa=" + gpa + ", course=" + course + ", milestones=" + milestones + ", notes=" + notes + "]";
+		return "Details [gpa=" + gpa + ", CourseTaken=" + courseTaken + ", milestones=" + milestones + ", notes=" + notes + "]";
 	}
 	
 	

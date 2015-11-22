@@ -39,11 +39,6 @@ public class RequirementCheckResults {
 	@Override
 	public String toString() {
 		return "RequirementCheckResults [name=" + name + ", passed=" + passed + ", details=" + details + "]";
-	}
-	
-	
-	
-	
-	
+	}	
 	
 }

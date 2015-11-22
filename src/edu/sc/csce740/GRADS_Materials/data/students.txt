@@ -7,7 +7,7 @@
     },
     "department": "COMPUTER_SCIENCE",
     "termBegan": {
-      "semester": "FALL",
+      "semester": "SUMMER",
       "year": 2013
     },
     "degreeSought": {
@@ -15,16 +15,16 @@
       "graduation": {
         "semester": "SPRING",
         "year": 2018
-		}
-      },
+      }
+    },
     "previousDegrees": [
-       {
+      {
         "name": "BS",
         "graduation": {
           "semester": "SPRING",
           "year": 2008
-          }
-       }
+        }
+      }
     ],
     "advisors": [
       {
@@ -51,7 +51,7 @@
       }
     ],
     "coursesTaken": [
-    {
+      {
         "course": {
           "name": "Naptime",
           "id": "nap734",
@@ -89,9 +89,9 @@
       },
       {
         "course": {
-            "name": "Compiler Construction",
-            "id": "csce531",
-            "numCredits": "3"
+          "name": "Compiler Construction",
+          "id": "csce531",
+          "numCredits": "3"
         },
         "term": {
           "semester": "SPRING",
@@ -101,9 +101,9 @@
       },
       {
         "course": {
-             "name": "Theory of Computation",
-             "id": "csce551",
-             "numCredits": "3"
+          "name": "Theory of Computation",
+          "id": "csce551",
+          "numCredits": "3"
         },
         "term": {
           "semester": "FALL",
@@ -113,9 +113,9 @@
       },
       {
         "course": {
-             "name": "Analysis of Algorithms",
-             "id": "csce750",
-             "numCredits": "3"
+          "name": "Analysis of Algorithms",
+          "id": "csce750",
+          "numCredits": "3"
         },
         "term": {
           "semester": "SPRING",
@@ -135,7 +135,7 @@
         },
         "grade": "A"
       },
-   {
+      {
         "course": {
           "name": "Dissertation Preparation",
           "id": "csce899",
@@ -147,7 +147,7 @@
         },
         "grade": "P"
       },
-   {
+      {
         "course": {
           "name": "Dissertation Preparation",
           "id": "csce899",
@@ -186,11 +186,14 @@
           "semester": "FALL",
           "year": 2014
         }
-	  }
+      }
     ],
     "notes": [
       "Great student. A++ Would recommend.",
-      "Owes me 20 bucks."
+      "Owes me 20 bucks.",
+      "peep gonna fail again",
+      "peep gonna fail again",
+      "peep gonna fail again"
     ]
   },
   {

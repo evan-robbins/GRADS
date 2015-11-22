@@ -20,11 +20,6 @@ public class CourseTaken {
 		this.grade = grade;
 	}
 	
-	public String toString()
-	{
-		return course + " " + term + " " + "grad: " + grade;
-	}
-	
 	public Course getCourse() {
 		return course;
 	}
@@ -49,4 +44,9 @@ public class CourseTaken {
 		this.grade = grade;
 	}
 
+	@Override
+	public String toString() {
+		return "CourseTaken [course=" + course + ", term=" + term + ", grade=" + grade + "]";
+	}
+	
 }
