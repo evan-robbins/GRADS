@@ -30,12 +30,12 @@ public class StudentRecord {
 //		CourseTaken courseTaken = new CourseTaken();
 //		Milestone milestone = new Milestone();
 //		
-//		this.student =  new Student();
-//		this.department = "COMPUTER_SCIENCE";
-//		this.termBegan = new Term();
-//		
-//		this.degreeSought = new Degree();
-//		this.certificateSought =  new Degree();
+		this.student =  new Student();
+		this.department = "";
+		this.termBegan = new Term();
+		
+		this.degreeSought = new Degree();
+		this.certificateSought =  new Degree();
 //		this.previousDegrees.add( tempDegree);
 
 //		this.advisors.add(prof);
@@ -63,6 +63,21 @@ public class StudentRecord {
 		this.coursesTaken = coursesTaken;
 		this.milestonesSet = milestonesSet;
 		this.notes = notes;
+	}
+
+	public StudentRecord(StudentRecord studentRecord) {
+		this.student = studentRecord.getStudent();
+		this.department = studentRecord.getDepartment();
+		
+		this.degreeSought = studentRecord.getDegreeSought();
+		this.certificateSought = studentRecord.getCertificateSought();
+		this.previousDegrees = studentRecord.getPreviousDegrees();
+
+		this.advisors = studentRecord.getAdvisors();
+		this.committee = studentRecord.getCommittee();
+		this.coursesTaken = studentRecord.getCoursesTaken();
+		this.milestonesSet = studentRecord.getMilestonesSet();
+		this.notes = studentRecord.getNotes();
 	}
 
 	//Getters and Setters

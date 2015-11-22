@@ -6,15 +6,19 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
-public class GRADSDriver {
-
-	public static void main(String[] args) {
+public class GRADSDriver 
+{
+	
+	public static void main(String[] args) 
+	{
 		System.out.println("Welcome to GRADS");
 		GRADS grads = new GRADS();
 
-		try {
+		try 
+		{
 			// Have the grads system load the uses, records and courses
 			// grads.loadUsers("C:/Users/New
 			// Hotness/git/GRADS/src/edu/sc/csce740/GRADS_Materials/data/users.txt");
@@ -27,20 +31,36 @@ public class GRADSDriver {
 
 			// Get User Input to log into the system
 			
-			grads.setUser("mmatthews");
-			System.out.println(grads.getStudentIDs());
+			//grads.setUser("mmatthews");
+			//System.out.println(grads.getStudentIDs());
 			
-			grads.addNote("mhunt", "a student is dumb", false); //should work
-			grads.addNote("mhunt", "bitch gonna fail", false); // should work  
+			//grads.addNote("mhunt", "shouldnt see", false); //should work
+			//grads.addNote("mhunt", "peep gonna fail again", true); // should work  
 			
-			grads.addNote("rbob", "bitch gonna fail", false); // should fail - not csce  
-			grads.addNote("adfa", "bitch gonna fail", false); // should fail - no student record  
+			//grads.addNote("rbob", "gonna fail", false); // should fail - not csce  
+			//grads.addNote("adfa", "gonna fail", false); // should fail - no student record  
 			
-			grads.setUser("mhunt");
-			grads.addNote("mhunt", "notes are gay", false); //should fail, not gpc
+			//grads.setUser("mhunt");
+			//grads.addNote("mhunt", "notes are gay", false); //should fail, not gpc
 			
-			//grads.addNote("jsmith", "a student is dumb", false); // no student record
-			//grads.addNote("rbob", "a student is dumb", false); //not a csce studnet, no student record
+			//grads.setUser("mhunt");
+			//StudentRecord temp = grads.getRecords().get(0);
+			//temp.getDegreeSought().setName("UGH SCREW THIS");
+			//grads.updateTranscript("mhunt", temp, false); //should work
+			
+			//temp.getStudent().setId("pika");
+			//grads.updateTranscript("mhunt", temp, false); //shouldnlt work
+			
+			//temp.getStudent().setFirstName("pikachu!");
+			//grads.updateTranscript("mhunt", temp, true); //should work
+			
+			//temp.getStudent().setFirstName("pikachu!");
+			//grads.updateTranscript("mhunt", temp, true); //should work
+			
+			//grads.setUser("mmatthews");
+			//temp.getStudent().setFirstName("Michelle");
+			//grads.updateTranscript("mhunt", temp, true); //should work
+			
 		}
 		catch (Exception e) 
 		{
@@ -48,9 +68,7 @@ public class GRADSDriver {
 		}
 		
 
-		System.out.println("GoodBye");
-
-
+		System.out.println("\n GoodBye");
 	}
 
 }

@@ -7,22 +7,31 @@
     },
     "department": "COMPUTER_SCIENCE",
     "termBegan": {
-      "semester": "FALL",
+      "semester": "SUMMER",
       "year": 2013
     },
     "degreeSought": {
       "name": "PHD",
       "graduation": {
         "semester": "SPRING",
-        "year": 2018  }
-         },
+        "year": 2018
+      }
+    },
+    "certificateSought": {
+      "name": "defaulDegreeName",
+      "graduation": {
+        "semester": "FALL",
+        "year": 2000
+      }
+    },
     "previousDegrees": [
-       {
+      {
         "name": "BS",
         "graduation": {
           "semester": "SPRING",
-          "year": 2008  } 
-       },
+          "year": 2008
+        }
+      }
     ],
     "advisors": [
       {
@@ -49,7 +58,7 @@
       }
     ],
     "coursesTaken": [
-    {
+      {
         "course": {
           "name": "Naptime",
           "id": "nap734",
@@ -87,9 +96,9 @@
       },
       {
         "course": {
-            "name": "Compiler Construction",
-            "id": "csce531",
-            "numCredits": "3"
+          "name": "Compiler Construction",
+          "id": "csce531",
+          "numCredits": "3"
         },
         "term": {
           "semester": "SPRING",
@@ -99,9 +108,9 @@
       },
       {
         "course": {
-             "name": "Theory of Computation",
-             "id": "csce551",
-             "numCredits": "3"
+          "name": "Theory of Computation",
+          "id": "csce551",
+          "numCredits": "3"
         },
         "term": {
           "semester": "FALL",
@@ -111,9 +120,9 @@
       },
       {
         "course": {
-             "name": "Analysis of Algorithms",
-             "id": "csce750",
-             "numCredits": "3"
+          "name": "Analysis of Algorithms",
+          "id": "csce750",
+          "numCredits": "3"
         },
         "term": {
           "semester": "SPRING",
@@ -133,7 +142,7 @@
         },
         "grade": "A"
       },
-   {
+      {
         "course": {
           "name": "Dissertation Preparation",
           "id": "csce899",
@@ -145,7 +154,7 @@
         },
         "grade": "P"
       },
-   {
+      {
         "course": {
           "name": "Dissertation Preparation",
           "id": "csce899",
@@ -184,7 +193,1816 @@
           "semester": "FALL",
           "year": 2014
         }
+      }
+    ],
+    "notes": [
+      "Great student. A++ Would recommend.",
+      "Owes me 20 bucks."
+    ]
+  },
+  {
+    "student": {
+      "id": "mhunt",
+      "firstName": "Michelle",
+      "lastName": "Hunt"
+    },
+    "department": "COMPUTER_SCIENCE",
+    "termBegan": {
+      "semester": "SUMMER",
+      "year": 2013
+    },
+    "degreeSought": {
+      "name": "PHD",
+      "graduation": {
+        "semester": "SPRING",
+        "year": 2018
+      }
+    },
+    "certificateSought": {
+      "name": "defaulDegreeName",
+      "graduation": {
+        "semester": "FALL",
+        "year": 2000
+      }
+    },
+    "previousDegrees": [
+      {
+        "name": "BS",
+        "graduation": {
+          "semester": "SPRING",
+          "year": 2008
+        }
+      }
+    ],
+    "advisors": [
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Duncan",
+        "lastName": "Buell"
+      }
+    ],
+    "committee": [
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Manton",
+        "lastName": "Matthews"
+      },
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Jason",
+        "lastName": "Bakos"
+      },
+      {
+        "department": "MATHEMATICS",
+        "firstName": "Richard",
+        "lastName": "McGehee"
+      }
+    ],
+    "coursesTaken": [
+      {
+        "course": {
+          "name": "Naptime",
+          "id": "nap734",
+          "numCredits": "5"
         },
+        "term": {
+          "semester": "SPRING",
+          "year": 2014
+        },
+        "grade": "B"
+      },
+      {
+        "course": {
+          "name": "Advanced Naptime",
+          "id": "nap888",
+          "numCredits": "5"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "B"
+      },
+      {
+        "course": {
+          "name": "Computer Architecture",
+          "id": "csce513",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2013
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Compiler Construction",
+          "id": "csce531",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2014
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Theory of Computation",
+          "id": "csce551",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Analysis of Algorithms",
+          "id": "csce750",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Seminar in Advances in Computing",
+          "id": "csce791",
+          "numCredits": "1"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Dissertation Preparation",
+          "id": "csce899",
+          "numCredits": "6"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "P"
+      },
+      {
+        "course": {
+          "name": "Dissertation Preparation",
+          "id": "csce899",
+          "numCredits": "6"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "P"
+      },
+      {
+        "course": {
+          "name": "Software Engineering",
+          "id": "csce740",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2015
+        },
+        "grade": "_"
+      }
+    ],
+    "milestonesSet": [
+      {
+        "milestone": "DISSERTATION_ADVISOR_SELECTED",
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        }
+      },
+      {
+        "milestone": "DISSERTATION_COMMITTEE_FORMED",
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        }
+      }
+    ],
+    "notes": [
+      "Great student. A++ Would recommend.",
+      "Owes me 20 bucks."
+    ]
+  },
+  {
+    "student": {
+      "id": "mhunt",
+      "firstName": "MichellePika",
+      "lastName": "Hunt"
+    },
+    "department": "COMPUTER_SCIENCE",
+    "termBegan": {
+      "semester": "SUMMER",
+      "year": 2013
+    },
+    "degreeSought": {
+      "name": "PHD",
+      "graduation": {
+        "semester": "SPRING",
+        "year": 2018
+      }
+    },
+    "certificateSought": {
+      "name": "defaulDegreeName",
+      "graduation": {
+        "semester": "FALL",
+        "year": 2000
+      }
+    },
+    "previousDegrees": [
+      {
+        "name": "BS",
+        "graduation": {
+          "semester": "SPRING",
+          "year": 2008
+        }
+      }
+    ],
+    "advisors": [
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Duncan",
+        "lastName": "Buell"
+      }
+    ],
+    "committee": [
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Manton",
+        "lastName": "Matthews"
+      },
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Jason",
+        "lastName": "Bakos"
+      },
+      {
+        "department": "MATHEMATICS",
+        "firstName": "Richard",
+        "lastName": "McGehee"
+      }
+    ],
+    "coursesTaken": [
+      {
+        "course": {
+          "name": "Naptime",
+          "id": "nap734",
+          "numCredits": "5"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2014
+        },
+        "grade": "B"
+      },
+      {
+        "course": {
+          "name": "Advanced Naptime",
+          "id": "nap888",
+          "numCredits": "5"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "B"
+      },
+      {
+        "course": {
+          "name": "Computer Architecture",
+          "id": "csce513",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2013
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Compiler Construction",
+          "id": "csce531",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2014
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Theory of Computation",
+          "id": "csce551",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Analysis of Algorithms",
+          "id": "csce750",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Seminar in Advances in Computing",
+          "id": "csce791",
+          "numCredits": "1"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Dissertation Preparation",
+          "id": "csce899",
+          "numCredits": "6"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "P"
+      },
+      {
+        "course": {
+          "name": "Dissertation Preparation",
+          "id": "csce899",
+          "numCredits": "6"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "P"
+      },
+      {
+        "course": {
+          "name": "Software Engineering",
+          "id": "csce740",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2015
+        },
+        "grade": "_"
+      }
+    ],
+    "milestonesSet": [
+      {
+        "milestone": "DISSERTATION_ADVISOR_SELECTED",
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        }
+      },
+      {
+        "milestone": "DISSERTATION_COMMITTEE_FORMED",
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        }
+      }
+    ],
+    "notes": [
+      "Great student. A++ Would recommend.",
+      "Owes me 20 bucks."
+    ]
+  },
+  {
+    "student": {
+      "id": "mhunt",
+      "firstName": "Michelle",
+      "lastName": "Hunt"
+    },
+    "department": "COMPUTER_SCIENCE",
+    "termBegan": {
+      "semester": "SUMMER",
+      "year": 2013
+    },
+    "degreeSought": {
+      "name": "PHD",
+      "graduation": {
+        "semester": "SPRING",
+        "year": 2018
+      }
+    },
+    "certificateSought": {
+      "name": "defaulDegreeName",
+      "graduation": {
+        "semester": "FALL",
+        "year": 2000
+      }
+    },
+    "previousDegrees": [
+      {
+        "name": "BS",
+        "graduation": {
+          "semester": "SPRING",
+          "year": 2008
+        }
+      }
+    ],
+    "advisors": [
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Duncan",
+        "lastName": "Buell"
+      }
+    ],
+    "committee": [
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Manton",
+        "lastName": "Matthews"
+      },
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Jason",
+        "lastName": "Bakos"
+      },
+      {
+        "department": "MATHEMATICS",
+        "firstName": "Richard",
+        "lastName": "McGehee"
+      }
+    ],
+    "coursesTaken": [
+      {
+        "course": {
+          "name": "Naptime",
+          "id": "nap734",
+          "numCredits": "5"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2014
+        },
+        "grade": "B"
+      },
+      {
+        "course": {
+          "name": "Advanced Naptime",
+          "id": "nap888",
+          "numCredits": "5"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "B"
+      },
+      {
+        "course": {
+          "name": "Computer Architecture",
+          "id": "csce513",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2013
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Compiler Construction",
+          "id": "csce531",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2014
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Theory of Computation",
+          "id": "csce551",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Analysis of Algorithms",
+          "id": "csce750",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Seminar in Advances in Computing",
+          "id": "csce791",
+          "numCredits": "1"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Dissertation Preparation",
+          "id": "csce899",
+          "numCredits": "6"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "P"
+      },
+      {
+        "course": {
+          "name": "Dissertation Preparation",
+          "id": "csce899",
+          "numCredits": "6"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "P"
+      },
+      {
+        "course": {
+          "name": "Software Engineering",
+          "id": "csce740",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2015
+        },
+        "grade": "_"
+      }
+    ],
+    "milestonesSet": [
+      {
+        "milestone": "DISSERTATION_ADVISOR_SELECTED",
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        }
+      },
+      {
+        "milestone": "DISSERTATION_COMMITTEE_FORMED",
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        }
+      }
+    ],
+    "notes": [
+      "Great student. A++ Would recommend.",
+      "Owes me 20 bucks."
+    ]
+  },
+  {
+    "student": {
+      "id": "mhunt",
+      "firstName": "Michelle",
+      "lastName": "Hunt"
+    },
+    "department": "COMPUTER_SCIENCE",
+    "termBegan": {
+      "semester": "SUMMER",
+      "year": 2013
+    },
+    "degreeSought": {
+      "name": "PHD",
+      "graduation": {
+        "semester": "SPRING",
+        "year": 2018
+      }
+    },
+    "certificateSought": {
+      "name": "defaulDegreeName",
+      "graduation": {
+        "semester": "FALL",
+        "year": 2000
+      }
+    },
+    "previousDegrees": [
+      {
+        "name": "BS",
+        "graduation": {
+          "semester": "SPRING",
+          "year": 2008
+        }
+      }
+    ],
+    "advisors": [
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Duncan",
+        "lastName": "Buell"
+      }
+    ],
+    "committee": [
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Manton",
+        "lastName": "Matthews"
+      },
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Jason",
+        "lastName": "Bakos"
+      },
+      {
+        "department": "MATHEMATICS",
+        "firstName": "Richard",
+        "lastName": "McGehee"
+      }
+    ],
+    "coursesTaken": [
+      {
+        "course": {
+          "name": "Naptime",
+          "id": "nap734",
+          "numCredits": "5"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2014
+        },
+        "grade": "B"
+      },
+      {
+        "course": {
+          "name": "Advanced Naptime",
+          "id": "nap888",
+          "numCredits": "5"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "B"
+      },
+      {
+        "course": {
+          "name": "Computer Architecture",
+          "id": "csce513",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2013
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Compiler Construction",
+          "id": "csce531",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2014
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Theory of Computation",
+          "id": "csce551",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Analysis of Algorithms",
+          "id": "csce750",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Seminar in Advances in Computing",
+          "id": "csce791",
+          "numCredits": "1"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Dissertation Preparation",
+          "id": "csce899",
+          "numCredits": "6"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "P"
+      },
+      {
+        "course": {
+          "name": "Dissertation Preparation",
+          "id": "csce899",
+          "numCredits": "6"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "P"
+      },
+      {
+        "course": {
+          "name": "Software Engineering",
+          "id": "csce740",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2015
+        },
+        "grade": "_"
+      }
+    ],
+    "milestonesSet": [
+      {
+        "milestone": "DISSERTATION_ADVISOR_SELECTED",
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        }
+      },
+      {
+        "milestone": "DISSERTATION_COMMITTEE_FORMED",
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        }
+      }
+    ],
+    "notes": [
+      "Great student. A++ Would recommend.",
+      "Owes me 20 bucks."
+    ]
+  },
+  {
+    "student": {
+      "id": "mhunt",
+      "firstName": "MichellePiakchu",
+      "lastName": "Hunt"
+    },
+    "department": "COMPUTER_SCIENCE",
+    "termBegan": {
+      "semester": "SUMMER",
+      "year": 2013
+    },
+    "degreeSought": {
+      "name": "PHD",
+      "graduation": {
+        "semester": "SPRING",
+        "year": 2018
+      }
+    },
+    "certificateSought": {
+      "name": "defaulDegreeName",
+      "graduation": {
+        "semester": "FALL",
+        "year": 2000
+      }
+    },
+    "previousDegrees": [
+      {
+        "name": "BS",
+        "graduation": {
+          "semester": "SPRING",
+          "year": 2008
+        }
+      }
+    ],
+    "advisors": [
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Duncan",
+        "lastName": "Buell"
+      }
+    ],
+    "committee": [
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Manton",
+        "lastName": "Matthews"
+      },
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Jason",
+        "lastName": "Bakos"
+      },
+      {
+        "department": "MATHEMATICS",
+        "firstName": "Richard",
+        "lastName": "McGehee"
+      }
+    ],
+    "coursesTaken": [
+      {
+        "course": {
+          "name": "Naptime",
+          "id": "nap734",
+          "numCredits": "5"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2014
+        },
+        "grade": "B"
+      },
+      {
+        "course": {
+          "name": "Advanced Naptime",
+          "id": "nap888",
+          "numCredits": "5"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "B"
+      },
+      {
+        "course": {
+          "name": "Computer Architecture",
+          "id": "csce513",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2013
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Compiler Construction",
+          "id": "csce531",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2014
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Theory of Computation",
+          "id": "csce551",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Analysis of Algorithms",
+          "id": "csce750",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Seminar in Advances in Computing",
+          "id": "csce791",
+          "numCredits": "1"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Dissertation Preparation",
+          "id": "csce899",
+          "numCredits": "6"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "P"
+      },
+      {
+        "course": {
+          "name": "Dissertation Preparation",
+          "id": "csce899",
+          "numCredits": "6"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "P"
+      },
+      {
+        "course": {
+          "name": "Software Engineering",
+          "id": "csce740",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2015
+        },
+        "grade": "_"
+      }
+    ],
+    "milestonesSet": [
+      {
+        "milestone": "DISSERTATION_ADVISOR_SELECTED",
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        }
+      },
+      {
+        "milestone": "DISSERTATION_COMMITTEE_FORMED",
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        }
+      }
+    ],
+    "notes": [
+      "Great student. A++ Would recommend.",
+      "Owes me 20 bucks."
+    ]
+  },
+  {
+    "student": {
+      "id": "mhunt",
+      "firstName": "MichellePiakchu",
+      "lastName": "Hunt"
+    },
+    "department": "COMPUTER_SCIENCE",
+    "termBegan": {
+      "semester": "SUMMER",
+      "year": 2013
+    },
+    "degreeSought": {
+      "name": "PHD",
+      "graduation": {
+        "semester": "SPRING",
+        "year": 2018
+      }
+    },
+    "certificateSought": {
+      "name": "defaulDegreeName",
+      "graduation": {
+        "semester": "FALL",
+        "year": 2000
+      }
+    },
+    "previousDegrees": [
+      {
+        "name": "BS",
+        "graduation": {
+          "semester": "SPRING",
+          "year": 2008
+        }
+      }
+    ],
+    "advisors": [
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Duncan",
+        "lastName": "Buell"
+      }
+    ],
+    "committee": [
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Manton",
+        "lastName": "Matthews"
+      },
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Jason",
+        "lastName": "Bakos"
+      },
+      {
+        "department": "MATHEMATICS",
+        "firstName": "Richard",
+        "lastName": "McGehee"
+      }
+    ],
+    "coursesTaken": [
+      {
+        "course": {
+          "name": "Naptime",
+          "id": "nap734",
+          "numCredits": "5"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2014
+        },
+        "grade": "B"
+      },
+      {
+        "course": {
+          "name": "Advanced Naptime",
+          "id": "nap888",
+          "numCredits": "5"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "B"
+      },
+      {
+        "course": {
+          "name": "Computer Architecture",
+          "id": "csce513",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2013
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Compiler Construction",
+          "id": "csce531",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2014
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Theory of Computation",
+          "id": "csce551",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Analysis of Algorithms",
+          "id": "csce750",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Seminar in Advances in Computing",
+          "id": "csce791",
+          "numCredits": "1"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Dissertation Preparation",
+          "id": "csce899",
+          "numCredits": "6"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "P"
+      },
+      {
+        "course": {
+          "name": "Dissertation Preparation",
+          "id": "csce899",
+          "numCredits": "6"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "P"
+      },
+      {
+        "course": {
+          "name": "Software Engineering",
+          "id": "csce740",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2015
+        },
+        "grade": "_"
+      }
+    ],
+    "milestonesSet": [
+      {
+        "milestone": "DISSERTATION_ADVISOR_SELECTED",
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        }
+      },
+      {
+        "milestone": "DISSERTATION_COMMITTEE_FORMED",
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        }
+      }
+    ],
+    "notes": [
+      "Great student. A++ Would recommend.",
+      "Owes me 20 bucks."
+    ]
+  },
+  {
+    "student": {
+      "id": "mhunt",
+      "firstName": "MichellePiakchu",
+      "lastName": "Hunt"
+    },
+    "department": "COMPUTER_SCIENCE",
+    "termBegan": {
+      "semester": "SUMMER",
+      "year": 2013
+    },
+    "degreeSought": {
+      "name": "PHD",
+      "graduation": {
+        "semester": "SPRING",
+        "year": 2018
+      }
+    },
+    "certificateSought": {
+      "name": "defaulDegreeName",
+      "graduation": {
+        "semester": "FALL",
+        "year": 2000
+      }
+    },
+    "previousDegrees": [
+      {
+        "name": "BS",
+        "graduation": {
+          "semester": "SPRING",
+          "year": 2008
+        }
+      }
+    ],
+    "advisors": [
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Duncan",
+        "lastName": "Buell"
+      }
+    ],
+    "committee": [
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Manton",
+        "lastName": "Matthews"
+      },
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Jason",
+        "lastName": "Bakos"
+      },
+      {
+        "department": "MATHEMATICS",
+        "firstName": "Richard",
+        "lastName": "McGehee"
+      }
+    ],
+    "coursesTaken": [
+      {
+        "course": {
+          "name": "Naptime",
+          "id": "nap734",
+          "numCredits": "5"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2014
+        },
+        "grade": "B"
+      },
+      {
+        "course": {
+          "name": "Advanced Naptime",
+          "id": "nap888",
+          "numCredits": "5"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "B"
+      },
+      {
+        "course": {
+          "name": "Computer Architecture",
+          "id": "csce513",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2013
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Compiler Construction",
+          "id": "csce531",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2014
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Theory of Computation",
+          "id": "csce551",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Analysis of Algorithms",
+          "id": "csce750",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Seminar in Advances in Computing",
+          "id": "csce791",
+          "numCredits": "1"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Dissertation Preparation",
+          "id": "csce899",
+          "numCredits": "6"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "P"
+      },
+      {
+        "course": {
+          "name": "Dissertation Preparation",
+          "id": "csce899",
+          "numCredits": "6"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "P"
+      },
+      {
+        "course": {
+          "name": "Software Engineering",
+          "id": "csce740",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2015
+        },
+        "grade": "_"
+      }
+    ],
+    "milestonesSet": [
+      {
+        "milestone": "DISSERTATION_ADVISOR_SELECTED",
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        }
+      },
+      {
+        "milestone": "DISSERTATION_COMMITTEE_FORMED",
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        }
+      }
+    ],
+    "notes": [
+      "Great student. A++ Would recommend.",
+      "Owes me 20 bucks."
+    ]
+  },
+  {
+    "student": {
+      "id": "mhunt",
+      "firstName": "MichellePiakchu",
+      "lastName": "Hunt"
+    },
+    "department": "COMPUTER_SCIENCE",
+    "termBegan": {
+      "semester": "SUMMER",
+      "year": 2013
+    },
+    "degreeSought": {
+      "name": "PHD",
+      "graduation": {
+        "semester": "SPRING",
+        "year": 2018
+      }
+    },
+    "certificateSought": {
+      "name": "defaulDegreeName",
+      "graduation": {
+        "semester": "FALL",
+        "year": 2000
+      }
+    },
+    "previousDegrees": [
+      {
+        "name": "BS",
+        "graduation": {
+          "semester": "SPRING",
+          "year": 2008
+        }
+      }
+    ],
+    "advisors": [
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Duncan",
+        "lastName": "Buell"
+      }
+    ],
+    "committee": [
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Manton",
+        "lastName": "Matthews"
+      },
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Jason",
+        "lastName": "Bakos"
+      },
+      {
+        "department": "MATHEMATICS",
+        "firstName": "Richard",
+        "lastName": "McGehee"
+      }
+    ],
+    "coursesTaken": [
+      {
+        "course": {
+          "name": "Naptime",
+          "id": "nap734",
+          "numCredits": "5"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2014
+        },
+        "grade": "B"
+      },
+      {
+        "course": {
+          "name": "Advanced Naptime",
+          "id": "nap888",
+          "numCredits": "5"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "B"
+      },
+      {
+        "course": {
+          "name": "Computer Architecture",
+          "id": "csce513",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2013
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Compiler Construction",
+          "id": "csce531",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2014
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Theory of Computation",
+          "id": "csce551",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Analysis of Algorithms",
+          "id": "csce750",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Seminar in Advances in Computing",
+          "id": "csce791",
+          "numCredits": "1"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Dissertation Preparation",
+          "id": "csce899",
+          "numCredits": "6"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "P"
+      },
+      {
+        "course": {
+          "name": "Dissertation Preparation",
+          "id": "csce899",
+          "numCredits": "6"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "P"
+      },
+      {
+        "course": {
+          "name": "Software Engineering",
+          "id": "csce740",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2015
+        },
+        "grade": "_"
+      }
+    ],
+    "milestonesSet": [
+      {
+        "milestone": "DISSERTATION_ADVISOR_SELECTED",
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        }
+      },
+      {
+        "milestone": "DISSERTATION_COMMITTEE_FORMED",
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        }
+      }
+    ],
+    "notes": [
+      "Great student. A++ Would recommend.",
+      "Owes me 20 bucks."
+    ]
+  },
+  {
+    "student": {
+      "id": "mhunt",
+      "firstName": "pikachu!",
+      "lastName": "Hunt"
+    },
+    "department": "COMPUTER_SCIENCE",
+    "termBegan": {
+      "semester": "SUMMER",
+      "year": 2013
+    },
+    "degreeSought": {
+      "name": "PHD",
+      "graduation": {
+        "semester": "SPRING",
+        "year": 2018
+      }
+    },
+    "certificateSought": {
+      "name": "defaulDegreeName",
+      "graduation": {
+        "semester": "FALL",
+        "year": 2000
+      }
+    },
+    "previousDegrees": [
+      {
+        "name": "BS",
+        "graduation": {
+          "semester": "SPRING",
+          "year": 2008
+        }
+      }
+    ],
+    "advisors": [
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Duncan",
+        "lastName": "Buell"
+      }
+    ],
+    "committee": [
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Manton",
+        "lastName": "Matthews"
+      },
+      {
+        "department": "COMPUTER_SCIENCE",
+        "firstName": "Jason",
+        "lastName": "Bakos"
+      },
+      {
+        "department": "MATHEMATICS",
+        "firstName": "Richard",
+        "lastName": "McGehee"
+      }
+    ],
+    "coursesTaken": [
+      {
+        "course": {
+          "name": "Naptime",
+          "id": "nap734",
+          "numCredits": "5"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2014
+        },
+        "grade": "B"
+      },
+      {
+        "course": {
+          "name": "Advanced Naptime",
+          "id": "nap888",
+          "numCredits": "5"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "B"
+      },
+      {
+        "course": {
+          "name": "Computer Architecture",
+          "id": "csce513",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2013
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Compiler Construction",
+          "id": "csce531",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2014
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Theory of Computation",
+          "id": "csce551",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Analysis of Algorithms",
+          "id": "csce750",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Seminar in Advances in Computing",
+          "id": "csce791",
+          "numCredits": "1"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "A"
+      },
+      {
+        "course": {
+          "name": "Dissertation Preparation",
+          "id": "csce899",
+          "numCredits": "6"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        },
+        "grade": "P"
+      },
+      {
+        "course": {
+          "name": "Dissertation Preparation",
+          "id": "csce899",
+          "numCredits": "6"
+        },
+        "term": {
+          "semester": "SPRING",
+          "year": 2015
+        },
+        "grade": "P"
+      },
+      {
+        "course": {
+          "name": "Software Engineering",
+          "id": "csce740",
+          "numCredits": "3"
+        },
+        "term": {
+          "semester": "FALL",
+          "year": 2015
+        },
+        "grade": "_"
+      }
+    ],
+    "milestonesSet": [
+      {
+        "milestone": "DISSERTATION_ADVISOR_SELECTED",
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        }
+      },
+      {
+        "milestone": "DISSERTATION_COMMITTEE_FORMED",
+        "term": {
+          "semester": "FALL",
+          "year": 2014
+        }
+      }
     ],
     "notes": [
       "Great student. A++ Would recommend.",
@@ -196,6 +2014,25 @@
       "id": "ggay",
       "firstName": "Greg",
       "lastName": "Gay"
+    },
+    "department": "",
+    "termBegan": {
+      "semester": "FALL",
+      "year": 2000
+    },
+    "degreeSought": {
+      "name": "defaulDegreeName",
+      "graduation": {
+        "semester": "FALL",
+        "year": 2000
+      }
+    },
+    "certificateSought": {
+      "name": "defaulDegreeName",
+      "graduation": {
+        "semester": "FALL",
+        "year": 2000
+      }
     },
     "advisors": [
       {
@@ -209,25 +2046,5 @@
       "note2",
       "note3"
     ]
-  },
-  
-  {
-    "student": {
-      "id": "rbob",
-      "firstName": "Robert",
-      "lastName": "Bob"
-    },
-    "department": "MATHEMATICS",
-    "termBegan": {
-      "semester": "FALL",
-      "year": 2013
-    },
-    "degreeSought": {
-      "name": "PHD",
-      "graduation": {
-        "semester": "SPRING",
-        "year": 2018  }
-         }
-   
-  },
+  }
 ]
