@@ -145,11 +145,11 @@ public class GRADS implements GRADSIntf
 		//Student is requesting their own SR
 		if(activeUser_.getId().equals(inputUser.getId())&&activeUser_.getRole().equals("STUDENT")){
 			System.out.println(activeUser_.getId() + " is requesting their Student Record.");
-			for(int index=0; index < records.size(); index++)
+			for(int index=0; index < temporaryRecords.size(); index++)
 			{
-				if(userId.equals(records.get(index).getStudent().getId()))
+				if(userId.equals(temporaryRecords.get(index).getStudent().getId()))
 				{
-					stuRec = records.get(index);
+					stuRec = temporaryRecords.get(index);
 				}
 			}	
 		}
@@ -157,11 +157,11 @@ public class GRADS implements GRADSIntf
 		//CS GPC is requesting one of their CS student's SR
 		if(!activeUser_.getId().equals(inputUser.getId())&&activeUser_.getRole().equals("GRADUATE_PROGRAM_COORDINATOR")&&activeUser_.getDepartment().equals(inputUser.getDepartment())){
 			System.out.println("GPC " + activeUser_.getId() + " is requesting " + inputUser.getId() + "'s Student Record.");
-			for(int index=0; index < records.size(); index++)
+			for(int index=0; index < temporaryRecords.size(); index++)
 			{
-				if(userId.equals(records.get(index).getStudent().getId()))
+				if(userId.equals(temporaryRecords.get(index).getStudent().getId()))
 				{
-					stuRec = records.get(index);
+					stuRec = temporaryRecords.get(index);
 				}
 			}
 		}
@@ -653,7 +653,6 @@ public class GRADS implements GRADSIntf
 		}
 	}
 
-
 	@Override
 	public void addNote(String userId, String note, Boolean permanent) throws Exception {
 		
@@ -754,18 +753,18 @@ public class GRADS implements GRADSIntf
 		//Student is requesting their own SR
 		if(activeUser_.getId().equals(inputUser.getId())&&activeUser_.getRole().equals("STUDENT")){
 			System.out.println(activeUser_.getId() + " is requesting their Progress Report.");
-			for(int index=0; index < records.size(); index++)
+			for(int index=0; index < temporaryRecords.size(); index++)
 			{
-				if(userId.equals(records.get(index).getStudent().getId()))
+				if(userId.equals(temporaryRecords.get(index).getStudent().getId()))
 				{
-					stuProg.setStudent(records.get(index).getStudent());
-					stuProg.setDepartment(records.get(index).getDepartment());
-					stuProg.setTermBegan(records.get(index).getTermBegan());
-					stuProg.setDegreeSought(records.get(index).getDegreeSought());
-					stuProg.setCertificateSought(records.get(index).getCertificateSought());
-					stuProg.setAdvisors(records.get(index).getAdvisors());
-					stuProg.setCommittee(records.get(index).getCommittee());
-					stuProg.setRequirementCheckResults(records.get(index));
+					stuProg.setStudent(temporaryRecords.get(index).getStudent());
+					stuProg.setDepartment(temporaryRecords.get(index).getDepartment());
+					stuProg.setTermBegan(temporaryRecords.get(index).getTermBegan());
+					stuProg.setDegreeSought(temporaryRecords.get(index).getDegreeSought());
+					stuProg.setCertificateSought(temporaryRecords.get(index).getCertificateSought());
+					stuProg.setAdvisors(temporaryRecords.get(index).getAdvisors());
+					stuProg.setCommittee(temporaryRecords.get(index).getCommittee());
+					stuProg.setRequirementCheckResults(temporaryRecords.get(index));
 					
 				}
 			}	
@@ -774,17 +773,17 @@ public class GRADS implements GRADSIntf
 		//CS GPC is requesting one of their CS student's SR
 		if(!activeUser_.getId().equals(inputUser.getId())&&activeUser_.getRole().equals("GRADUATE_PROGRAM_COORDINATOR")&&activeUser_.getDepartment().equals(inputUser.getDepartment())){
 			System.out.println("GPC " + activeUser_.getId() + " is requesting " + inputUser.getId() + "'s Progress Report.");
-			for(int index=0; index < records.size(); index++)
+			for(int index=0; index < temporaryRecords.size(); index++)
 			{
-				if(userId.equals(records.get(index).getStudent().getId()))
+				if(userId.equals(temporaryRecords.get(index).getStudent().getId()))
 				{
-					stuProg.setStudent(records.get(index).getStudent());
-					stuProg.setDepartment(records.get(index).getDepartment());
-					stuProg.setTermBegan(records.get(index).getTermBegan());
-					stuProg.setDegreeSought(records.get(index).getDegreeSought());
-					stuProg.setCertificateSought(records.get(index).getCertificateSought());
-					stuProg.setAdvisors(records.get(index).getAdvisors());
-					stuProg.setCommittee(records.get(index).getCommittee());
+					stuProg.setStudent(temporaryRecords.get(index).getStudent());
+					stuProg.setDepartment(temporaryRecords.get(index).getDepartment());
+					stuProg.setTermBegan(temporaryRecords.get(index).getTermBegan());
+					stuProg.setDegreeSought(temporaryRecords.get(index).getDegreeSought());
+					stuProg.setCertificateSought(temporaryRecords.get(index).getCertificateSought());
+					stuProg.setAdvisors(temporaryRecords.get(index).getAdvisors());
+					stuProg.setCommittee(temporaryRecords.get(index).getCommittee());
 					
 				}
 			}

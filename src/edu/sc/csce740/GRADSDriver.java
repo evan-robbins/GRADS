@@ -2,9 +2,11 @@ package edu.sc.csce740;
 
 import java.io.File;
 import java.io.FileReader;
+import java.io.PrintWriter;
 import java.util.List;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 public class GRADSDriver {
@@ -13,6 +15,7 @@ public class GRADSDriver {
 	{
 		System.out.println("Welcome to GRADS");
 		GRADS grads = new GRADS();
+		String recordFilePath_ = "C:/Users/New Hotness/git/GRADS/src/edu/sc/csce740/GRADS_Materials/data/poop.txt";
 		
 		//LOADING DATABASES
 		try
@@ -21,6 +24,7 @@ public class GRADSDriver {
 		grads.loadUsers("C:/Users/New Hotness/git/GRADS/src/edu/sc/csce740/GRADS_Materials/data/users.txt");
 		grads.loadCourses("C:/Users/New Hotness/git/GRADS/src/edu/sc/csce740/GRADS_Materials/data/courses.txt");
 		grads.loadRecords("C:/Users/New Hotness/git/GRADS/src/edu/sc/csce740/GRADS_Materials/data/students.txt");
+		
 		
 		grads.setUser("mhunt");
 		//grads.setUser("mmatthews");
@@ -65,12 +69,19 @@ public class GRADSDriver {
 		//System.out.println(grads.getactiveUser_().toString());
 		
 		//GET TRANSCRIPT FUNCTION TEST
-		StudentRecord test = grads.getTranscript("mhunt");
-		System.out.println(test.toString());
+		//StudentRecord test = grads.getTranscript("mhunt");
+		//System.out.println(test.toString());
 		
 		//GENERATE PROGRESS SUMMARY FUNCTION TEST
-		//ProgressSummary test = grads.generateProgressSummary("mhunt");
-		//System.out.println(test.toString());
+		ProgressSummary test = grads.generateProgressSummary("mhunt");
+		System.out.println(test.toString());
+		
+		String recordsInJsonFormat = new GsonBuilder().setPrettyPrinting().create().toJson(test);
+		
+		PrintWriter file = new PrintWriter(recordFilePath_);
+		file.write("");
+		file.append(recordsInJsonFormat);
+		file.close();
 		
 			
 		//grads.loadUsers("C:/Users//Documents/Csce740/GRADS_Materials/GRADS_Materials/data/users.txt");
