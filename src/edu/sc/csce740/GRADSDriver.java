@@ -30,7 +30,7 @@ public class GRADSDriver {
 		
 		//ADD NOTE FUNCTION TEST
 		//grads.addNote("mhunt", "shouldnt see in records class", false); //should work
-		grads.addNote("mhunt", "peep gonna fail again", true); // should work  
+		//grads.addNote("mhunt", "peep gonna fail again", true); // should work  
 		
 		//grads.addNote("rbob", "gonna fail", false); // should fail - not csce  
 		//grads.addNote("adfa", "gonna fail", false); // should fail - no student record  
