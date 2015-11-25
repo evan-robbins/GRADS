@@ -739,10 +739,11 @@ public class GRADS implements GRADSIntf
 		boolean validUser = false;
 		for(int index=0; index < users.size(); index++)
 		{
-			if(userId.equals(users.get(index).getId()))
+			if(users.get(index) != null && userId.equals(users.get(index).getId()))
 			{
 					validUser = true;
 					inputUser = users.get(index);
+					break;
 			}
 		}
 		

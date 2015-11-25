@@ -18,6 +18,9 @@ public class Details {
 		this.milestones = milestones;
 		this.notes = notes;
 	}
+	public Details(){
+		
+	}
 
 	//Getters and Setters
 	public String getGpa() {

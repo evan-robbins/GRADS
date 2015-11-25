@@ -90,16 +90,19 @@ public class ProgressSummary {
 			activeDeg.create_PHD(activeStud);
 			this.requirementCheckResults = activeDeg.getpHD();
 		}
-		if(activeStud.getDegreeSought().getName().equals("MSCSE")){
+		if(activeStud.getDegreeSought().getName().equals("MSE")){
 			System.out.println(activeStud.getStudent().getId() + " is a MSCSE student!");
 		}
-		if(activeStud.getDegreeSought().getName().equals("MECSE")){
+		if(activeStud.getDegreeSought().getName().equals("MENG")){
 			System.out.println(activeStud.getStudent().getId() + " is a MECSE student!");
+			MENG activeDeg = new MENG();
+			activeDeg.create_MENG(activeStud);
+			this.requirementCheckResults = activeDeg.getmENG();
 		}
-		if(activeStud.getDegreeSought().getName().equals("MSE")){
+		if(activeStud.getDegreeSought().getName().equals("MS")){
 			System.out.println(activeStud.getStudent().getId() + " is a MSE student!");
 		}
-		if(activeStud.getDegreeSought().getName().equals("CGSIAS")){
+		if(activeStud.getDegreeSought().getName().equals("INFORMATION_ASSURANCE")){
 			System.out.println(activeStud.getStudent().getId() + " is a CGSIAS student!");
 		}
 		

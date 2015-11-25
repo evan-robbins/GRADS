@@ -131,10 +131,12 @@ public class PHD {
 				} else {
 				   if(courses.get(index).getGrade() == 'A' || courses.get(index).getGrade() == 'B'){
 					   if(year - courses.get(index).getTerm().getYear() < 6){
-						    core_course_list.add(courses.get(index));	
-						    String credStr = courses.get(index).getCourse().getNumCredits();
-					   		int credVal = Integer.valueOf(credStr);
-					   		passedVal = passedVal + credVal;
+						   if (Integer.parseInt(courses.get(index).getCourse().getId().substring(courses.get(index).getCourse().getId().length() -3)) >= 700){ 
+							    core_course_list.add(courses.get(index));	
+						    	String credStr = courses.get(index).getCourse().getNumCredits();
+					   			int credVal = Integer.valueOf(credStr);
+					   			passedVal = passedVal + credVal;
+						   }
 					   }
 				   }
 				}
@@ -159,14 +161,83 @@ public class PHD {
 	public void degree_based_credits(StudentRecord studRec){
 		List<CourseTaken> core_course_list = new ArrayList<CourseTaken>();
 		List<String> core_course_notes = new ArrayList<String>();
-		int passedVal = 0;
 		boolean passed = false;
 		int year = Calendar.getInstance().get(Calendar.YEAR);
+		boolean bachelor = false;
+		boolean masters = false;
+		int totalHoursCSCE = 0;
+		int totalHoursnonCSCE = 0;
 		
+		
+			
+		for(int index=0; index<studRec.getPreviousDegrees().size(); index++){
+			if(studRec.getPreviousDegrees().get(index).getName().equals("BS")){
+				bachelor = true;
+			} else{
+				masters = true;
+			}
+		}
+		
+		for(int index=0; index<studRec.getCoursesTaken().size(); index++){
+			if(year - studRec.getCoursesTaken().get(index).getTerm().getYear() < 6){
+				if(studRec.getCoursesTaken().get(index).getGrade() == 'A' || 
+				   studRec.getCoursesTaken().get(index).getGrade() == 'B' ){
+					if(!studRec.getCoursesTaken().get(index).getCourse().getName().equals("csce799") || 
+					   !studRec.getCoursesTaken().get(index).getCourse().getName().equals("csce899") ){
+							if (studRec.getCoursesTaken().get(index).getCourse().getId().contains("csce") &&
+								Integer.parseInt(studRec.getCoursesTaken().get(index).getCourse().getId().substring(studRec.getCoursesTaken().get(index).getCourse().getId().length() -3)) >= 500){
+									String hours = studRec.getCoursesTaken().get(index).getCourse().getNumCredits();
+									totalHoursCSCE = totalHoursCSCE + Integer.valueOf(hours);
+									core_course_list.add(studRec.getCoursesTaken().get(index));
+							}
+							if (!studRec.getCoursesTaken().get(index).getCourse().getId().contains("csce") &&
+								Integer.parseInt(studRec.getCoursesTaken().get(index).getCourse().getId().substring(studRec.getCoursesTaken().get(index).getCourse().getId().length() -3)) >= 500){
+									String hours = studRec.getCoursesTaken().get(index).getCourse().getNumCredits();
+									totalHoursnonCSCE = totalHoursnonCSCE + Integer.valueOf(hours);
+									core_course_list.add(studRec.getCoursesTaken().get(index));
+							}
+					}
+				}
+				
+			}
+		}
+		
+		if(bachelor){
+			if(totalHoursCSCE >= 24){
+				passed = true;
+			} else {
+				int remain = 24 - totalHoursCSCE;
+				String failed = "You must pass " + remain + " more hours of CSCE courses numbered above 700.";
+				core_course_notes.add(failed);
+			}
+		}
+		
+		if(bachelor){
+			if(totalHoursnonCSCE > 24){
+				totalHoursnonCSCE = 24;
+			}
+			if(totalHoursCSCE + totalHoursnonCSCE >= 48){
+				passed = true;
+			} else {
+				int remain = 48 - (totalHoursCSCE + totalHoursnonCSCE);
+				String failed = "You must pass " + remain + " more hours of graduate courses";
+				core_course_notes.add(failed);
+			}
+		}
+		
+		if(masters){
+			if(totalHoursCSCE >= 24){
+				passed = true;
+			} else {
+				int remain = 24 - totalHoursCSCE;
+				String failed = "You must pass " + remain + " more hours of CSCE courses numbered above 700.";
+				core_course_notes.add(failed);
+			}
+		}
 		
 		
 		Details core_details = new Details(null, core_course_list, null, core_course_notes);
-		RequirementCheckResults core_courses = new RequirementCheckResults("CORE_COURSES_PHD", passed, core_details);
+		RequirementCheckResults core_courses = new RequirementCheckResults("DEGREE_BASED_CREDITS", passed, core_details);
 		this.pHD.add(core_courses);
 	}
 	
@@ -207,10 +278,18 @@ public class PHD {
 	public void time_limit_phd(int year){
 		int currentYear = Calendar.getInstance().get(Calendar.YEAR);
 		boolean passed = false;
+		List<String> core_course_notes = new ArrayList<String>();
+		
 		if(currentYear - year < 9){
 			passed = true;
 		}
-		RequirementCheckResults core_courses = new RequirementCheckResults("TIME_LIMIT_PHD", passed, null);
+		
+		if(!passed){
+			core_course_notes.add("It has been six years since you have been admitted.");
+		}
+		
+		Details core_details = new Details(null, null, null, core_course_notes);
+		RequirementCheckResults core_courses = new RequirementCheckResults("TIME_LIMIT_PHD", passed, core_details);
 		this.pHD.add(core_courses);
 	}
 	
@@ -222,6 +301,7 @@ public class PHD {
 		double totalGPA = 0;
 		String totalGPAString = "";
 		boolean passed = false;
+		List<String> core_course_notes = new ArrayList<String>();
 		
 		for(int index=0; index<courses.size(); index++){
 			if(year - courses.get(index).getTerm().getYear() < 6){
@@ -250,7 +330,11 @@ public class PHD {
 			passed = true;
 		}
 		
-		Details core_details = new Details(totalGPAString, null, null, null);
+		if(!passed){
+			core_course_notes.add("Your GPA must be 3.00 or higher");
+		}
+		
+		Details core_details = new Details(totalGPAString, null, null, core_course_notes);
 		RequirementCheckResults core_courses = new RequirementCheckResults("GPA", passed, core_details);
 		this.pHD.add(core_courses);
 	}
