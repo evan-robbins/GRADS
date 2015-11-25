@@ -91,19 +91,29 @@ public class ProgressSummary {
 			this.requirementCheckResults = activeDeg.getpHD();
 		}
 		if(activeStud.getDegreeSought().getName().equals("MSE")){
-			System.out.println(activeStud.getStudent().getId() + " is a MSCSE student!");
+			System.out.println(activeStud.getStudent().getId() + " is a MSE student!");
+			MSE activeDeg = new MSE();
+			activeDeg.create_MSE(activeStud);
+			this.requirementCheckResults = activeDeg.getmSE();
 		}
 		if(activeStud.getDegreeSought().getName().equals("MENG")){
-			System.out.println(activeStud.getStudent().getId() + " is a MECSE student!");
+			System.out.println(activeStud.getStudent().getId() + " is a MENG student!");
 			MENG activeDeg = new MENG();
 			activeDeg.create_MENG(activeStud);
 			this.requirementCheckResults = activeDeg.getmENG();
 		}
 		if(activeStud.getDegreeSought().getName().equals("MS")){
-			System.out.println(activeStud.getStudent().getId() + " is a MSE student!");
+			System.out.println(activeStud.getStudent().getId() + " is a MS student!");
+			MS activeDeg = new MS();
+			activeDeg.create_MS(activeStud);
+			this.requirementCheckResults = activeDeg.getmS();
+			
 		}
 		if(activeStud.getDegreeSought().getName().equals("INFORMATION_ASSURANCE")){
 			System.out.println(activeStud.getStudent().getId() + " is a CGSIAS student!");
+			CGSIAS activeDeg = new CGSIAS();
+			activeDeg.create_CGSIAS(activeStud);
+			this.requirementCheckResults = activeDeg.getcGSIAS();
 		}
 		
 		

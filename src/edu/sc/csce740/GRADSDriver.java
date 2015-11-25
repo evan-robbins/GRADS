@@ -26,7 +26,7 @@ public class GRADSDriver {
 		grads.loadRecords("C:/Users/New Hotness/git/GRADS/src/edu/sc/csce740/GRADS_Materials/data/students.txt");
 		
 		
-		grads.setUser("mhunt");
+		grads.setUser("katek");
 		//grads.setUser("mmatthews");
 		
 		//GET STUDENT IDS FUNCTION TEST
@@ -73,7 +73,7 @@ public class GRADSDriver {
 		//System.out.println(test.toString());
 		
 		//GENERATE PROGRESS SUMMARY FUNCTION TEST
-		ProgressSummary test = grads.generateProgressSummary("mhunt");
+		ProgressSummary test = grads.generateProgressSummary("katek");
 		System.out.println(test.toString());
 		
 		String recordsInJsonFormat = new GsonBuilder().setPrettyPrinting().create().toJson(test);
