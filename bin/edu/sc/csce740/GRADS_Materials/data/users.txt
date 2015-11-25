@@ -33,5 +33,12 @@
         "lastName": "Smith",
         "role": "GRADUATE_PROGRAM_COORDINATOR",
         "department": "MATHEMATICS"
+    },
+        {
+       "id": "katek",
+       "firstName": "Kate",
+       "lastName": "Kelly",
+        "role": "STUDENT",
+        "department": "COMPUTER_SCIENCE"
     }
 ]
