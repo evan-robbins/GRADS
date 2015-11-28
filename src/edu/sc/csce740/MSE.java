@@ -59,7 +59,7 @@ public class MSE {
 		//Uses Course Taken Object to compute CORE_COURSES_MENG rule
 		for(int index=0; index<courses.size(); index++){
 			for(int i=0; i<courseNames.length; i++){
-				if(courses.get(index).getCourse().getId().equals(courseNames[i])){
+				if(courses.get(index) != null && courses.get(index).getCourse().getId().equals(courseNames[i])){
 					if(courses.get(index).getGrade() == 'A' || courses.get(index).getGrade() == 'B'){
 						if(year - courses.get(index).getTerm().getYear() < 6){
 						core_course_list.add(courses.get(index));
@@ -95,7 +95,7 @@ public class MSE {
 		int year = Calendar.getInstance().get(Calendar.YEAR);
 		boolean passed = false;
 		int passedVal = 0;
-		boolean [] coursePassed = new boolean[5];
+		boolean [] coursePassed = new boolean[19];
 		Arrays.fill(coursePassed, Boolean.FALSE);
 		
 		String [] courseNames = new String[19];
@@ -122,7 +122,7 @@ public class MSE {
 		//Uses Course Taken Object to compute CORE_COURSES_MENG rule
 		for(int index=0; index<courses.size(); index++){
 			for(int i=0; i<courseNames.length; i++){
-				if(courses.get(index).getCourse().getId().equals(courseNames[i])){
+				if(courses.get(index) != null && courses.get(index).getCourse().getId().equals(courseNames[i])){
 					if(courses.get(index).getGrade() == 'A' || courses.get(index).getGrade() == 'B'){
 						if(year - courses.get(index).getTerm().getYear() < 6){
 						core_course_list.add(courses.get(index));
@@ -160,7 +160,7 @@ public class MSE {
 		
 		//Uses Course Taken Object to compute CORE_COURSES_MENG rule
 		for(int index=0; index<courses.size(); index++){
-			if(courses.get(index).getCourse().getId().equals("csce793")){
+			if(courses.get(index) != null && courses.get(index).getCourse().getId().equals("csce793")){
 				if(courses.get(index).getGrade() == 'A' || courses.get(index).getGrade() == 'B' || courses.get(index).getGrade() == 'P'){
 					if(year - courses.get(index).getTerm().getYear() < 6){
 						core_course_list.add(courses.get(index));
@@ -208,7 +208,7 @@ public class MSE {
 		List<String> core_course_notes = new ArrayList<String>();
 		
 		for(int index=0; index<courses.size(); index++){
-			if(year - courses.get(index).getTerm().getYear() < 6){
+			if(courses.get(index) != null && year - courses.get(index).getTerm().getYear() < 6){
 				if(courses.get(index).getGrade() != 'P'){
 					if(courses.get(index).getGrade() != '_'){
 						classGrade = gpa(courses.get(index).getGrade(),courses.get(index).getCourse().getNumCredits());
@@ -281,7 +281,7 @@ public class MSE {
 		
 		for(int index=0; index<milestones.size(); index++){
 			for(int i=0; i<milesNames.length; i++){
-				if(milestones.get(index).getMilestone().equals(milesNames[i])){
+				if(milestones.get(index) != null && milestones.get(index).getMilestone().equals(milesNames[i])){
 					core_miles_list.add(milestones.get(index));
 					passedVal++;
 					milesPassed[i] = true;

@@ -785,7 +785,7 @@ public class GRADS implements GRADSIntf
 					stuProg.setCertificateSought(temporaryRecords.get(index).getCertificateSought());
 					stuProg.setAdvisors(temporaryRecords.get(index).getAdvisors());
 					stuProg.setCommittee(temporaryRecords.get(index).getCommittee());
-					
+					stuProg.setRequirementCheckResults(temporaryRecords.get(index));
 				}
 			}
 		}

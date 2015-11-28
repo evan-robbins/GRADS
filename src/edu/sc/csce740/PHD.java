@@ -82,7 +82,7 @@ public class PHD {
 		//Uses Course Taken Object to compute CORE_COURSES_PHD rule
 		for(int index=0; index<courses.size(); index++){
 			for(int i=0; i<courseNames.length; i++){
-				if(courses.get(index).getCourse().getId().equals(courseNames[i])){
+				if(courses.get(index) != null && courses.get(index).getCourse().getId().equals(courseNames[i])){
 					if(courses.get(index).getGrade() == 'A' || courses.get(index).getGrade() == 'B'){
 						if(year - courses.get(index).getTerm().getYear() < 6){
 						core_course_list.add(courses.get(index));
@@ -120,7 +120,7 @@ public class PHD {
 		
 		
 		for(int index=0; index<courses.size(); index++){
-			if(courses.get(index).getCourse().getId().contains("csce")){
+			if(courses.get(index) != null && courses.get(index).getCourse().getId().contains("csce")){
 				if(courses.get(index).getCourse().getId().equals("csce513") ||
 				   courses.get(index).getCourse().getId().equals("csce531") ||
 				   courses.get(index).getCourse().getId().equals("csce551") ||
@@ -179,7 +179,7 @@ public class PHD {
 		}
 		
 		for(int index=0; index<studRec.getCoursesTaken().size(); index++){
-			if(year - studRec.getCoursesTaken().get(index).getTerm().getYear() < 6){
+			if(studRec.getCoursesTaken().get(index) != null && year - studRec.getCoursesTaken().get(index).getTerm().getYear() < 6){
 				if(studRec.getCoursesTaken().get(index).getGrade() == 'A' || 
 				   studRec.getCoursesTaken().get(index).getGrade() == 'B' ){
 					if(!studRec.getCoursesTaken().get(index).getCourse().getName().equals("csce799") || 
@@ -249,7 +249,7 @@ public class PHD {
 		int year = Calendar.getInstance().get(Calendar.YEAR);
 		
 		for(int index=0; index<courses.size(); index++){
-			if(courses.get(index).getCourse().getId().contains("csce899")){
+			if(courses.get(index) != null && courses.get(index).getCourse().getId().contains("csce899")){
 				if(courses.get(index).getGrade() == 'P'){
 					if(year - courses.get(index).getTerm().getYear() < 6)
 						core_course_list.add(courses.get(index));
@@ -304,7 +304,7 @@ public class PHD {
 		List<String> core_course_notes = new ArrayList<String>();
 		
 		for(int index=0; index<courses.size(); index++){
-			if(year - courses.get(index).getTerm().getYear() < 6){
+			if(courses.get(index) != null && year - courses.get(index).getTerm().getYear() < 6){
 				if(courses.get(index).getGrade() != 'P'){
 					if(courses.get(index).getGrade() != '_'){
 						classGrade = gpa(courses.get(index).getGrade(),courses.get(index).getCourse().getNumCredits());
@@ -383,7 +383,7 @@ public class PHD {
 		
 		for(int index=0; index<milestones.size(); index++){
 			for(int i=0; i<milesNames.length; i++){
-				if(milestones.get(index).getMilestone().equals(milesNames[i])){
+				if(milestones.get(index) != null && milestones.get(index).getMilestone().equals(milesNames[i])){
 					core_miles_list.add(milestones.get(index));
 					passedVal++;
 					milesPassed[i] = true;
