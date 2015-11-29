@@ -12,23 +12,54 @@ public class MENG {
 	//Class Variables
 	private List<RequirementCheckResults> mENG = new ArrayList<RequirementCheckResults>();
 
-	//General Constructors
+    /**
+     * Returns the MENG object with List<RequirementCheckResults> mENG
+     * @param 
+     * @return an MENG object with List<RequirementCheckResults> mENG
+     * @throws 
+     */
 	public MENG(List<RequirementCheckResults> pHD) {
 		super();
 		this.mENG = pHD;
 	}
+	
+    /**
+     * Returns an empty MENG object
+     * @param 
+     * @return an empty MENG object
+     * @throws 
+     */
 	public MENG(){
 		
 	}
 	
-	//Getters and Setters
+    /**
+     * Returns the List<RequirementCheckResults> mENG
+     * @param 
+     * @return the List<RequirementCheckResults> mENG
+     * @throws 
+     */
 	public List<RequirementCheckResults> getmENG() {
 		return mENG;
 	}
+	
+	/**
+     * Sets the List<RequirementCheckResults> mENG
+     * @param  List<RequirementCheckResults> mENG
+     * @return 
+     * @throws 
+     */
 	public void setmENG(List<RequirementCheckResults> mENG) {
 		this.mENG = mENG;
 	}
 	
+    /**
+     * Calls every rule function for the MENG degree program
+     * Each rule function adds a RequirementCheckResults object to the List<RequirementCheckResults> mENG
+     * @param  StudentRecord studRec 
+     * @return 
+     * @throws 
+     */
 	public void create_MENG(StudentRecord studRec){
 		core_courses_meng(studRec.getCoursesTaken());
 		additional_credits_meng(studRec.getCoursesTaken());
@@ -38,6 +69,14 @@ public class MENG {
 		milestones_meng(studRec.getMilestonesSet());
 	}
 	
+    /**
+     * Function for the CORE_COURSES_MENG graduation rule
+     * The List<CourseTaken> courses is used to determine if a student has passed the core courses rule for the MENG degree
+     * Every object in the courses list is looped through and selected if it fits the required constraints
+     * @param  List<CourseTaken> courses
+     * @return 
+     * @throws 
+     */
 	public void core_courses_meng(List<CourseTaken> courses){
 		//Function Variables
 		List<CourseTaken> core_course_list = new ArrayList<CourseTaken>();
@@ -86,6 +125,14 @@ public class MENG {
 		this.mENG.add(core_courses);
 	}
 	
+    /**
+     * Function for the ADDITIONAL_CREDITS_MENG graduation rule
+     * The List<CourseTaken> courses is used to determine if a student has passed the additional credits rule for the MENG degree
+     * Every object in the courses list is looped through and selected if it fits the required constraints
+     * @param  List<CourseTaken> courses
+     * @return 
+     * @throws 
+     */
 	public void additional_credits_meng(List<CourseTaken> courses){
 		List<CourseTaken> core_course_list = new ArrayList<CourseTaken>();
 		List<String> core_course_notes = new ArrayList<String>();
@@ -131,6 +178,14 @@ public class MENG {
 		this.mENG.add(core_courses);
 	}
 	
+    /**
+     * Function for the DEGREE_BASED_CREDITS_MENG graduation rule
+     * The StudentRecord studRec contains a coursesTaken list which is used to determine if a student has passed the additional credits rule for the MENG degree
+     * Every object in the coursesTaken list is looped through and selected if it fits the required constraints
+     * @param  StudentRecord studRec
+     * @return 
+     * @throws 
+     */
 	public void degree_based_credits_meng(StudentRecord studRec){
 		List<CourseTaken> core_course_list = new ArrayList<CourseTaken>();
 		List<String> core_course_notes = new ArrayList<String>();
@@ -193,6 +248,14 @@ public class MENG {
 		this.mENG.add(core_courses);
 	}
 	
+    /**
+     * Function for the DEGREE_BASED_CREDITS_MENG graduation rule
+     * The int value from studRec.getTermBegan.getYear is used to determine if the student has finished their degree program within 6 years.
+     * The Calendar class gets the current year of the system and compares it to the student's yearBegan
+     * @param  int year
+     * @return 
+     * @throws 
+     */
 	public void time_limit_meng(int year){
 		int currentYear = Calendar.getInstance().get(Calendar.YEAR);
 		boolean passed = false;
@@ -211,6 +274,15 @@ public class MENG {
 		this.mENG.add(core_courses);
 	}
 	
+
+    /**
+     * Function for the GPA graduation rule
+     * The List<CourseTaken> courses is used to determine if a student has passed the gpa rule for the MENG degree
+     * Every object in the courses list is looped through and selected if it fits the required constraints
+     * @param  List<CourseTaken> courses
+     * @return 
+     * @throws 
+     */
 	public void gpa(List<CourseTaken> courses){
 		int year = Calendar.getInstance().get(Calendar.YEAR);
 		List<Integer> grades = new ArrayList<Integer>();
@@ -257,6 +329,13 @@ public class MENG {
 		this.mENG.add(core_courses);
 	}
 	
+	/**
+     * Function to calculate the grade points of a given course
+     * The grade points are calculated by multiplying the grade of char iGrade against the number of hours
+     * @param  char iGrade, String iHours
+     * @return 
+     * @throws 
+     */
 	public int gpa(char iGrade, String iHours){
 		int gpa = 0;
 		int hours = Integer.valueOf(iHours);
@@ -278,6 +357,14 @@ public class MENG {
 		return gpa;
 	}
 	
+    /**
+     * Function for the MILESTONES_MENG graduation rule
+     * The List<CourseTaken> milestones is used to determine if a student has passed the milestones rule for the MENG degree
+     * Every object in the milestones list is looped through and selected if it fits the required constraints
+     * @param  List<CourseTaken> milestones
+     * @return 
+     * @throws 
+     */
 	public void milestones_meng(List<Milestone> milestones){
 		List<Milestone> core_miles_list = new ArrayList<Milestone>();
 		List<String> core_miles_notes = new ArrayList<String>();
@@ -307,7 +394,7 @@ public class MENG {
 			}
 		}
 		
-		if(passedVal == 4){
+		if(passedVal == 3){
 			passed = true;
 		}
 		

@@ -12,24 +12,44 @@ public class MSE {
 	//Class Variables
 	private List<RequirementCheckResults> mSE = new ArrayList<RequirementCheckResults>();
 
-	//General Constructor
-	public MSE(List<RequirementCheckResults> mSE) {
-		super();
-		this.mSE = mSE;
-	}
+	/**
+     * Default constructor that is used to create the class
+     * @param 
+     * @return 
+     * @throws 
+     */
 	public MSE(){
 		
 	}
 	
-	//Getters and Setters
+	/**
+     * Method to get the requirement check results list called mSE 
+     * @param 
+     * @return mSE is a list of requirement check results 
+     * @throws 
+     */
 	public List<RequirementCheckResults> getmSE() {
 		return mSE;
 	}
 
+	/**
+     * Method to set the requirement check results list called MSE 
+     * @param mSE is a list requirement check results
+     * @return 
+     * @throws 
+     */
 	public void setmSE(List<RequirementCheckResults> mSE) {
 		this.mSE = mSE;
 	}
 
+	/**
+     * Creates all the milestones for the MSE degree object and
+     * sets their information using the passed in student record. 
+     * @param studRec is the student record for which the requirement
+     * results will be used to check the milestones
+     * @return 
+     * @throws 
+     */
 	public void create_MSE(StudentRecord studRec){
 		core_courses_mse(studRec.getCoursesTaken());
 		additional_credits_mse(studRec.getCoursesTaken());
@@ -39,6 +59,13 @@ public class MSE {
 		milestones_mse(studRec.getMilestonesSet());
 	}
 
+	
+	/**
+     * Method to check if the core courses for the mSE milestone have been complete
+     * @param courses is a list of course taken by the student
+     * @return 
+     * @throws 
+     */
 	public void core_courses_mse(List<CourseTaken> courses){
 		//Function Variables
 		List<CourseTaken> core_course_list = new ArrayList<CourseTaken>();
@@ -88,6 +115,13 @@ public class MSE {
 		this.mSE.add(core_courses);
 	}
 	
+	/**
+     * Method to check if the additional credits milestone has been passed if not
+     * we list the requirements that have failed. 
+     * @param courses is a list of course taken by the student
+     * @return 
+     * @throws 
+     */
 	public void additional_credits_mse(List<CourseTaken> courses){
 		//Function Variables
 		List<CourseTaken> core_course_list = new ArrayList<CourseTaken>();
@@ -151,6 +185,13 @@ public class MSE {
 		this.mSE.add(core_courses);
 	}
 	
+	
+	/**
+     * Method to check if the student has more than 1 year of work experience. 
+     * @param courses is a list of course taken by the student
+     * @return 
+     * @throws 
+     */
 	public void experience(List<CourseTaken> courses){
 		//Function Variables
 		List<CourseTaken> core_course_list = new ArrayList<CourseTaken>();
@@ -179,6 +220,13 @@ public class MSE {
 		this.mSE.add(core_courses);
 	}
 	
+	/**
+     * Method to check if the time limit milestone has been passed if not
+     * we list the requirements that have failed. 
+     * @param year is the year the degree was begun
+     * @return 
+     * @throws 
+     */
 	public void time_limit_mse(int year){
 		int currentYear = Calendar.getInstance().get(Calendar.YEAR);
 		boolean passed = false;
@@ -197,6 +245,13 @@ public class MSE {
 		this.mSE.add(core_courses);
 	}
 	
+	/**
+     * Method to check if the gpa milestone has been passed if not
+     * we list why the requirement failed. 
+     * @param courses is a list of course taken by the student
+     * @return 
+     * @throws 
+     */
 	public void gpa(List<CourseTaken> courses){
 		int year = Calendar.getInstance().get(Calendar.YEAR);
 		List<Integer> grades = new ArrayList<Integer>();
@@ -243,6 +298,13 @@ public class MSE {
 		this.mSE.add(core_courses);
 	}
 	
+	/**
+     * Method to check if the gpa of a course. 
+     * @param iGrade is the grade letter of the course
+     * @param iHours is the number of hours the course is worth
+     * @return gpa the gpa of the course that was taken
+     * @throws 
+     */
 	public int gpa(char iGrade, String iHours){
 		int gpa = 0;
 		int hours = Integer.valueOf(iHours);
@@ -264,6 +326,12 @@ public class MSE {
 		return gpa;
 	}
 	
+	/**
+     * Method to check if all milestones for the MSE have been completed
+     * @param milestones is a list of milestones that the student has completed
+     * @return 
+     * @throws 
+     */
 	public void milestones_mse(List<Milestone> milestones){
 		List<Milestone> core_miles_list = new ArrayList<Milestone>();
 		List<String> core_miles_notes = new ArrayList<String>();

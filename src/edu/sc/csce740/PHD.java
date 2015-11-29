@@ -12,45 +12,44 @@ public class PHD {
 	//Class Variables
 	private List<RequirementCheckResults> pHD = new ArrayList<RequirementCheckResults>();
 
-	//General Constructors
-	public PHD(List<RequirementCheckResults> pHD, List<CourseTaken> coursePHD) {
-		super();
-		this.pHD = pHD;
-	}
+	/**
+     * Default constructor that is used to create the class
+     * @param 
+     * @return 
+     * @throws 
+     */
 	public PHD(){
 		
 	}
 	
-	//Getters and Setters
+	/**
+     * Method to get the requirement check results list called PHD 
+     * @param 
+     * @return pHD a list of requirement check results 
+     * @throws 
+     */
 	public List<RequirementCheckResults> getpHD() {
 		return pHD;
 	}
+	
+	/**
+     * Method to set the requirement check results list called PHD 
+     * @param pHD is a list requirement check results
+     * @return 
+     * @throws 
+     */
 	public void setpHD(List<RequirementCheckResults> pHD) {
 		this.pHD = pHD;
 	}
-	
-	/*THIS KINDA WORKS
-	public void create_PHD(StudentRecord studRec){
-		double gpa = 0;
-		List<Courses> coursePHD = null;
-		List<String> notes = new ArrayList<String>();
-		notes.add("test");
 
-		for(int index=0; index<studRec.getCoursesTaken().size(); index++){
-			studRec.getCoursesTaken().get(index);
-			
-		}
-		
-		for(int index=0; index<studRec.getMilestonesSet().size(); index++){
-			studRec.getMilestonesSet().get(index);
-			
-		}
-		
-		Details core_details = new Details(gpa, coursePHD, null, notes);
-		RequirementCheckResults core_courses = new RequirementCheckResults("CORE_COURSES_PHD", false, core_details);
-		this.pHD.add(core_courses);
-	}*/
-	
+	/**
+     * Creates all the milestones for the PHD degree object and
+     * sets their information using a passed in student record. 
+     * @param studRec is the student record for which the requirement
+     * results will be used to check the milestones
+     * @return 
+     * @throws 
+     */
 	public void create_PHD(StudentRecord studRec){
 		core_courses_phd(studRec.getCoursesTaken());
 		additonal_credits_phd(studRec.getCoursesTaken());
@@ -61,7 +60,12 @@ public class PHD {
 		milestones_phd(studRec.getMilestonesSet());
 	}
 	
-
+	/**
+     * Method to check if the core courses for the phd milestone have been complete
+     * @param courses is a list of course taken by the student
+     * @return 
+     * @throws 
+     */
 	public void core_courses_phd(List<CourseTaken> courses){
 		//Function Variables
 		List<CourseTaken> core_course_list = new ArrayList<CourseTaken>();
@@ -111,6 +115,13 @@ public class PHD {
 		this.pHD.add(core_courses);
 	}
 	
+	/**
+     * Method to check if the additional credits milestone has been passed if not
+     * we list the requirements that have failed. 
+     * @param courses is a list of course taken by the student
+     * @return 
+     * @throws 
+     */
 	public void additonal_credits_phd(List<CourseTaken> courses){
 		List<CourseTaken> core_course_list = new ArrayList<CourseTaken>();
 		List<String> core_course_notes = new ArrayList<String>();
@@ -158,6 +169,14 @@ public class PHD {
 		
 	}
 	
+	/**
+     * Method to check if the degree based milestone has been passed if not
+     * we list the requirements that have failed. 
+     * @param studRec is the student record for which the requirement
+     * results will be used to check the milestones
+     * @return 
+     * @throws 
+     */
 	public void degree_based_credits(StudentRecord studRec){
 		List<CourseTaken> core_course_list = new ArrayList<CourseTaken>();
 		List<String> core_course_notes = new ArrayList<String>();
@@ -241,6 +260,13 @@ public class PHD {
 		this.pHD.add(core_courses);
 	}
 	
+	/**
+     * Method to check if the thesis credits milestone has been passed if not
+     * we list the requirements that have failed. 
+     * @param courses is a list of course taken by the student
+     * @return 
+     * @throws 
+     */
 	public void thesis_credits_phd(List<CourseTaken> courses){
 		List<CourseTaken> core_course_list = new ArrayList<CourseTaken>();
 		List<String> core_course_notes = new ArrayList<String>();
@@ -275,6 +301,13 @@ public class PHD {
 		this.pHD.add(core_courses);
 	}
 	
+	/**
+     * Method to check if the time limit milestone has been passed if not
+     * we list the requirements that have failed. 
+     * @param year is the year the degree was begun
+     * @return 
+     * @throws 
+     */
 	public void time_limit_phd(int year){
 		int currentYear = Calendar.getInstance().get(Calendar.YEAR);
 		boolean passed = false;
@@ -293,6 +326,13 @@ public class PHD {
 		this.pHD.add(core_courses);
 	}
 	
+	/**
+     * Method to check if the gpa milestone has been passed if not
+     * we list why the requirement failed. 
+     * @param courses is a list of course taken by the student
+     * @return 
+     * @throws 
+     */
 	public void gpa(List<CourseTaken> courses){
 		int year = Calendar.getInstance().get(Calendar.YEAR);
 		List<Integer> grades = new ArrayList<Integer>();
@@ -339,7 +379,13 @@ public class PHD {
 		this.pHD.add(core_courses);
 	}
 	
-	
+	/**
+     * Method to check if the gpa of a course. 
+     * @param iGrade is the grade letter of the course
+     * @param iHours is the number of hours the course is worth
+     * @return gpa the gpa of the course that was taken
+     * @throws 
+     */
 	public int gpa(char iGrade, String iHours){
 		int gpa = 0;
 		int hours = Integer.valueOf(iHours);
@@ -361,7 +407,12 @@ public class PHD {
 		return gpa;
 	}
 	
-	
+	/**
+     * Method to check if all milestones for the PHD have been completed
+     * @param milestones is a list of milestones that the student has completed
+     * @return 
+     * @throws 
+     */
 	public void milestones_phd(List<Milestone> milestones){
 		List<Milestone> core_miles_list = new ArrayList<Milestone>();
 		List<String> core_miles_notes = new ArrayList<String>();
@@ -404,8 +455,6 @@ public class PHD {
 		Details core_details = new Details(null, null, core_miles_list, core_miles_notes);
 		RequirementCheckResults core_courses = new RequirementCheckResults("MILESTONES_PHD", passed, core_details);
 		this.pHD.add(core_courses);
-		
-		
 		
 	}
 	

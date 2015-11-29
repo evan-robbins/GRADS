@@ -227,7 +227,14 @@
       "year": 2013
     },
     "degreeSought": {
-      "name": "MS",
+      "name": "PHD",
+      "graduation": {
+        "semester": "SPRING",
+        "year": 2018
+      }
+    },
+        "certificateSought": {
+      "name": "INFORMATION_ASSURANCE",
       "graduation": {
         "semester": "SPRING",
         "year": 2018
@@ -235,7 +242,7 @@
     },
         "previousDegrees": [
       {
-        "name": "BS",
+        "name": "INFORMATION_ASSURANCE",
         "graduation": {
           "semester": "SPRING",
           "year": 2008

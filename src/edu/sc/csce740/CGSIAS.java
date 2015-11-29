@@ -1,3 +1,4 @@
+
 package edu.sc.csce740;
 
 import java.math.BigDecimal;
@@ -12,24 +13,54 @@ public class CGSIAS {
 	//Class Variables
 	private List<RequirementCheckResults> cGSIAS = new ArrayList<RequirementCheckResults>();
 
-	//General Constructor
+    /**
+     * Returns the requirement Check results for the certificate
+     * @param cGSIAS sets the value of the requirementCheckResults list
+     * @return a CGSIAS object with the value of cGSIAS
+     * @throws 
+     */
 	public CGSIAS(List<RequirementCheckResults> cGSIAS) {
 		super();
 		this.cGSIAS = cGSIAS;
 	}
+    
+	/**
+     * Returns an empty CGSIAS object
+     * @param 
+     * @return empty CGSIAS object
+     * @throws 
+     */
 	public CGSIAS(){
 		
 	}
 
-	//Getters and Setters
+	
+    /**
+     * Returns the requirement Check results for the certificate
+     * @param 
+     * @return Returns the requirement Check results for the certificate
+     * @throws 
+     */
 	public List<RequirementCheckResults> getcGSIAS() {
 		return cGSIAS;
 	}
-
+	
+    /**
+     * Sets the requirement Check results for the certificate
+     * @param  cGSIAS sets the value of the requirement check results
+     * @return 
+     * @throws 
+     */
 	public void setcGSIAS(List<RequirementCheckResults> cGSIAS) {
 		this.cGSIAS = cGSIAS;
 	}
 	
+    /**
+     * Creates the progress report for the certificate 
+     * @param studRec is a student record to be passed in
+     * @return 
+     * @throws 
+     */
 	public void create_CGSIAS(StudentRecord studRec){
 		core_courses_infas(studRec.getCoursesTaken());
 		additional_credits_infas(studRec);
@@ -37,6 +68,12 @@ public class CGSIAS {
 		gpa(studRec.getCoursesTaken());
 	}
 	
+    /**
+     * Checks to see if the core courses are passed for the security certificate
+     * @param Courses is a list of courses taken by the student
+     * @return 
+     * @throws 
+     */
 	public void core_courses_infas(List<CourseTaken> courses){
 		//Function Variables
 		List<CourseTaken> core_course_list = new ArrayList<CourseTaken>();
@@ -55,7 +92,8 @@ public class CGSIAS {
 		//Uses Course Taken Object to compute CORE_COURSES_MENG rule
 		for(int index=0; index<courses.size(); index++){
 			for(int i=0; i<courseNames.length; i++){
-				if(courses.get(index).getCourse().getId().equals(courseNames[i])){
+				if(courses.get(index) != null && 
+				   courses.get(index).getCourse().getId().equals(courseNames[i])){
 					if(courses.get(index).getGrade() == 'A' || courses.get(index).getGrade() == 'B'){
 						if(year - courses.get(index).getTerm().getYear() < 6){
 						core_course_list.add(courses.get(index));
@@ -84,6 +122,12 @@ public class CGSIAS {
 		this.cGSIAS.add(core_courses);
 	}
 	
+    /**
+     * Checks to see if the additional credits milestone has been passed
+     * @param studRec is a student record to be passed in
+     * @return 
+     * @throws 
+     */
 	public void additional_credits_infas(StudentRecord studRec){
 		List<CourseTaken> core_course_list = new ArrayList<CourseTaken>();
 		List<String> core_course_notes = new ArrayList<String>();
@@ -95,7 +139,7 @@ public class CGSIAS {
 		
 		
 		for(int index=0; index<studRec.getCoursesTaken().size(); index++){
-			if(year - studRec.getCoursesTaken().get(index).getTerm().getYear() < 6){
+			if(studRec.getCoursesTaken().get(index) != null && year - studRec.getCoursesTaken().get(index).getTerm().getYear() < 6){
 				if(studRec.getCoursesTaken().get(index).getGrade() == 'A' || 
 				   studRec.getCoursesTaken().get(index).getGrade() == 'B' ){
 					if(studRec.getCoursesTaken().get(index).getCourse().getName().equals("csce522") ||
@@ -146,13 +190,17 @@ public class CGSIAS {
 				core_course_notes.add(failed);
 			}
 		
-		
-		
 		Details core_details = new Details(null, core_course_list, null, core_course_notes);
 		RequirementCheckResults core_courses = new RequirementCheckResults("ADDITIONAL_CREDITS_INFAS", passed, core_details);
 		this.cGSIAS.add(core_courses);
 	}
 	
+    /**
+     * Checks to see if the time limit milestone was complete by the student
+     * @param year to see if all courses have been taken within 6 years 
+     * @return 
+     * @throws 
+     */
 	public void time_limit_infas(int year){
 		int currentYear = Calendar.getInstance().get(Calendar.YEAR);
 		boolean passed = false;
@@ -171,6 +219,12 @@ public class CGSIAS {
 		this.cGSIAS.add(core_courses);
 	}
 	
+    /**
+     * Calculates the overall gpa for the certificate
+     * @param courses to calculate the gpa for the selected certificate
+     * @return 
+     * @throws 
+     */
 	public void gpa(List<CourseTaken> courses){
 		int year = Calendar.getInstance().get(Calendar.YEAR);
 		List<Integer> grades = new ArrayList<Integer>();
@@ -182,7 +236,8 @@ public class CGSIAS {
 		List<String> core_course_notes = new ArrayList<String>();
 		
 		for(int index=0; index<courses.size(); index++){
-			if(year - courses.get(index).getTerm().getYear() < 6){
+			if(courses.get(index) != null &&
+			   year - courses.get(index).getTerm().getYear() < 6){
 				if(courses.get(index).getGrade() != 'P'){
 					if(courses.get(index).getGrade() != '_'){
 						classGrade = gpa(courses.get(index).getGrade(),courses.get(index).getCourse().getNumCredits());
@@ -217,6 +272,13 @@ public class CGSIAS {
 		this.cGSIAS.add(core_courses);
 	}
 	
+    /**
+     * Calculates the gpa for the number of hours and grade.
+     * @param iGgade is the grade made on the course
+     * @param iHours the number of hours the course was worth
+     * @return the gap for the selected course
+     * @throws 
+     */
 	public int gpa(char iGrade, String iHours){
 		int gpa = 0;
 		int hours = Integer.valueOf(iHours);
@@ -238,3 +300,4 @@ public class CGSIAS {
 		return gpa;
 	}
 }
+
