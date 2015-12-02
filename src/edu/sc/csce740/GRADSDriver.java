@@ -3,6 +3,7 @@ package edu.sc.csce740;
 import java.io.File;
 import java.io.FileReader;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -15,15 +16,20 @@ public class GRADSDriver {
 	{
 		System.out.println("Welcome to GRADS");
 		GRADS grads = new GRADS();
-		String recordFilePath_ = "C:/Users/New Hotness/git/GRADS/src/edu/sc/csce740/GRADS_Materials/data/poop.txt";
+		String recordFilePath_ = "C:/Users/New Hotness/git/GRADS/src/resources/poop.txt";
 		
 		//LOADING DATABASES
 		try
 		{
 		//Have the grads system load the uses, records and courses 
-		grads.loadUsers("C:/Users/New Hotness/git/GRADS/src/edu/sc/csce740/GRADS_Materials/data/users.txt");
-		grads.loadCourses("C:/Users/New Hotness/git/GRADS/src/edu/sc/csce740/GRADS_Materials/data/courses.txt");
-		grads.loadRecords("C:/Users/New Hotness/git/GRADS/src/edu/sc/csce740/GRADS_Materials/data/students.txt");
+		grads.loadUsers("C:/Users/New Hotness/git/GRADS/src/resources/users.txt");
+		grads.loadCourses("C:/Users/New Hotness/git/GRADS/src/resources/courses.txt");
+		grads.loadRecords("C:/Users/New Hotness/git/GRADS/src/resources/students.txt");
+		
+		
+		//grads.loadUsers("C:/Users/Hero/git/GRADS/src/edu/sc/csce740/GRADS_Materials/data/users.txt");
+		//grads.loadCourses("C:/Users/Hero/git/GRADS/src/edu/sc/csce740/GRADS_Materials/data/courses.txt");	
+		//grads.loadRecords("C:/Users/Hero/git/GRADS/src/edu/sc/csce740/GRADS_Materials/data/students.txt");
 		
 		
 		grads.setUser("katek");
@@ -76,12 +82,21 @@ public class GRADSDriver {
 		ProgressSummary test = grads.generateProgressSummary("katek");
 		System.out.println(test.toString());
 		
-		String recordsInJsonFormat = new GsonBuilder().setPrettyPrinting().create().toJson(test);
+		//SIMULATE COURSES FUNCTION TEST
+		//List<CourseTaken> c = new ArrayList<CourseTaken>();
+		//grads.simulateCourses("katek", c);
 		
+
+		
+		String recordsInJsonFormat = new GsonBuilder().setPrettyPrinting().create().toJson(test);
 		PrintWriter file = new PrintWriter(recordFilePath_);
 		file.write("");
 		file.append(recordsInJsonFormat);
 		file.close();
+		
+	
+		
+		
 		
 			
 		//grads.loadUsers("C:/Users//Documents/Csce740/GRADS_Materials/GRADS_Materials/data/users.txt");
