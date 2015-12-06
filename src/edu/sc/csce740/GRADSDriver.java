@@ -79,6 +79,12 @@ public class GRADSDriver {
 		//System.out.println(test.toString());
 		
 		//GENERATE PROGRESS SUMMARY FUNCTION TEST
+		
+		StudentRecord studRecTest = grads.getTranscript("katek");
+		studRecTest.getDegreeSought().setName("MSE");
+		grads.updateTranscript("katek", studRecTest, false);
+		
+		
 		ProgressSummary test = grads.generateProgressSummary("katek");
 		System.out.println(test.toString());
 		

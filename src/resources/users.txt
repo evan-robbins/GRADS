@@ -21,6 +21,13 @@
         "department": "MATHEMATICS"
     },
     {
+        "id": "rbob2",
+        "firstName": "Robert",
+        "lastName": "Bob",
+        "role": "STUDENT",
+        "department": "COMPUTER_SCIENCE"
+    },
+    {
         "id": "mmatthews",
         "firstName": "Manton",
         "lastName": "Matthews",

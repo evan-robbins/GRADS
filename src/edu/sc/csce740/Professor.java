@@ -93,6 +93,11 @@ public class Professor {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+
+	@Override
+	public String toString() {
+		return "Professor [department=" + department + ", firstName=" + firstName + ", lastName=" + lastName + "]";
+	}
 	
 	/**
      * To string method that returns a string of all the private members in the professor class
@@ -100,9 +105,6 @@ public class Professor {
      * @return a string 
      * @throws 
      */
-	public String toString() {
-		return "Professor [department=" + department + ", firstName="
-				+ firstName + ", lastName=" + lastName + "]";
-	}
+
 		
 }

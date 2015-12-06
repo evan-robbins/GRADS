@@ -246,7 +246,13 @@ public class ProgressSummary {
 			System.out.println(activeStud.getStudent().getId() + " is a CGSIAS student!");
 			CGSIAS activeDeg = new CGSIAS();
 			activeDeg.create_CGSIAS(activeStud);
+			System.out.println(activeDeg.getcGSIAS().toString());
+			if(this.requirementCheckResults != null){
 			this.requirementCheckResults.addAll(activeDeg.getcGSIAS());
+			} else {
+				this.requirementCheckResults = activeDeg.getcGSIAS();
+			}
+			
 		}
 	}
 	
